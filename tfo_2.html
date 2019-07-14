@@ -7,29 +7,59 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head><style>
     
-
-body{background-color: white;}
-  
- table {
-  border-collapse: collapse;
-  width: 50%;
-  border-spacing: 10px;
-  align-self: right;
-  margin-top: -15%;
- margin-right: 30%;
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v47/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
 }
 
-th, td {
-  padding: 8px;
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+body{background-color: white;}
+  
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+    margin-top: -30%;
+ margin-right: 25%; 
+}
+
+td, th {
+  border: 1px solid #dddddd;
   text-align: right;
-  border-bottom: 1px solid #ddd;
-  border-style: none;
-  width: 150px;
+  padding: 8px;
 }
 
 tr:hover {
-  background-color:#0084BD;
+  background-color:#E3E0D2;
 }
+
+.btn {
+  background-color:   #0084BD  ;
+  border: none;
+  color: white;
+  padding: 7px 10px;
+  font-size: 90px;
+  cursor: pointer;
+}
+
+
 .footerh {
    position: auto;
    left: 0;
@@ -44,15 +74,28 @@ tr:hover {
  #fotp{text-align: center;}
 
 </style>
-  <meta http-equiv="X-UA-Compatible" content="IE=9" />
-
-  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<meta charset="utf-8" />
 <meta name="modified" content="2019-05-20" />
 <meta name="Created" content="2014-09-28" />
-
-
-  <link rel="stylesheet" href="c1.css" />
-
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<meta charset="utf-8" />
+<meta name="modified" content="2019-05-20" />
+<meta name="Created" content="2014-09-28" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<meta charset="utf-8" />
+<meta name="modified" content="2019-05-20" />
+<meta name="Created" content="2014-09-28" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="ccsc.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="iconcss.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="c1.css" />
 <link rel="stylesheet" href="c4.css" />
 <!--
   <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js" charset="UTF-8"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
@@ -105,9 +148,9 @@ jQuery( this ).removeClass( "ui-corner-top" ).addClass( "ui-corner-all" );
 
 </script>
 <script src="//dar.ksu.edu.sa/sites/dar.ksu.edu.sa/files/js/js_V2KQFnTX2KQLb59mf_WGukB9bJJ7jv3ROyji0A-PsGM.js"></script>
-<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"ar\/","ajaxPageState":{"theme":"zurbclean","theme_token":"X8NTSB-eppgqojGk0F_6E2zu8bTtAudSzkxS53AyM0I","js":{"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.7\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/custom\/custom_tree\/js\/tree.js":1,"sites\/all\/modules\/custom\/ksu_search\/js\/jquery-ui.js":1,"sites\/all\/modules\/contrib\/zurb_responsive_tables\/js\/responsive-tables.js":1,"public:\/\/languages\/ar_N-ry8G3pP-H3OQiJ2shRltkbG1H5ChGECq-AKhyjpHE.js":1,"0":1,"sites\/dar.ksu.edu.sa\/themes\/zurbclean\/js\/vendor\/custom.modernizr.js":1,"sites\/dar.ksu.edu.sa\/themes\/zurbclean\/js\/foundation.min.js":1,"sites\/all\/themes\/zurbksu2\/js\/scripts.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.base-rtl.css":1,"modules\/system\/system.menus-rtl.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.messages-rtl.css":1,"modules\/system\/system.theme.css":1,"modules\/system\/system.theme-rtl.css":1,"sites\/all\/modules\/contrib\/ldap\/ldap_user\/ldap_user.css":1,"sites\/all\/modules\/custom\/custom_tree\/css\/jquery-ui.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date-rtl.css":1,"modules\/field\/theme\/field.css":1,"modules\/field\/theme\/field-rtl.css":1,"sites\/all\/modules\/custom\/ksu_search\/css\/jquery-ui.css":1,"modules\/node\/node.css":1,"modules\/user\/user.css":1,"modules\/user\/user-rtl.css":1,"sites\/all\/modules\/contrib\/youtube\/css\/youtube.css":1,"sites\/all\/modules\/contrib\/zurb_responsive_tables\/css\/responsive-tables.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/views\/css\/views-rtl.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor-rtl.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/ldap\/ldap_servers\/ldap_servers.admin.css":1,"modules\/locale\/locale.css":1,"modules\/locale\/locale-rtl.css":1,"sites\/all\/themes\/zurb-foundation\/css\/normalize.css":1,"sites\/dar.ksu.edu.sa\/themes\/zurbclean\/css\/foundation.min.css":1,"sites\/dar.ksu.edu.sa\/themes\/zurbclean\/css\/app.css":1,"sites\/dar.ksu.edu.sa\/themes\/zurbclean\/css\/app-rtl.css":1,"sites\/all\/themes\/zurbksu2\/css\/font-awesome.min.css":1,"sites\/all\/themes\/zurbksu2\/css\/style.css":1,"sites\/all\/themes\/zurbksu2\/css\/style-rtl.css":1,"sites\/all\/themes\/zurbksu2\/css\/printable.css":1,"0":1}}});</script>-->
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"ar\/","ajaxPageState":{"theme":"zurbclean","theme_token":"X8NTSB-eppgqojGk0F_6E2zu8bTtAudSzkxS53AyM0I","js":{"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.7\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/custom\/custom_tree\/js\/tree.js":1,"sites\/all\/modules\/custom\/ksu_search\/js\/jquery-ui.js":1,"sites\/all\/modules\/contrib\/zurb_responsive_tables\/js\/responsive-tables.js":1,"public:\/\/languages\/ar_N-ry8G3pP-H3OQiJ2shRltkbG1H5ChGECq-AKhyjpHE.js":1,"0":1,"sites\/dar.ksu.edu.sa\/themes\/zurbclean\/js\/vendor\/custom.modernizr.js":1,"sites\/dar.ksu.edu.sa\/themes\/zurbclean\/js\/foundation.min.js":1,"sites\/all\/themes\/zurbksu2\/js\/scripts.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.base-rtl.css":1,"modules\/system\/system.menus-rtl.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.messages-rtl.css":1,"modules\/system\/system.theme.css":1,"modules\/system\/system.theme-rtl.css":1,"sites\/all\/modules\/contrib\/ldap\/ldap_user\/ldap_user.css":1,"sites\/all\/modules\/custom\/custom_tree\/css\/jquery-ui.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date-rtl.css":1,"modules\/field\/theme\/field.css":1,"modules\/field\/theme\/field-rtl.css":1,"sites\/all\/modules\/custom\/ksu_search\/css\/jquery-ui.css":1,"modules\/node\/node.css":1,"modules\/user\/user.css":1,"modules\/user\/user-rtl.css":1,"sites\/all\/modules\/contrib\/youtube\/css\/youtube.css":1,"sites\/all\/modules\/contrib\/zurb_responsive_tables\/css\/responsive-tables.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/views\/css\/views-rtl.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor-rtl.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/ldap\/ldap_servers\/ldap_servers.admin.css":1,"modules\/locale\/locale.css":1,"modules\/locale\/locale-rtl.css":1,"sites\/all\/themes\/zurb-foundation\/css\/normalize.css":1,"sites\/dar.ksu.edu.sa\/themes\/zurbclean\/css\/foundation.min.css":1,"sites\/dar.ksu.edu.sa\/themes\/zurbclean\/css\/app.css":1,"sites\/dar.ksu.edu.sa\/themes\/zurbclean\/css\/app-rtl.css":1,"sites\/all\/themes\/zurbksu2\/css\/font-awesome.min.css":1,"sites\/all\/themes\/zurbksu2\/css\/style.css":1,"sites\/all\/themes\/zurbksu2\/css\/style-rtl.css":1,"sites\/all\/themes\/zurbksu2\/css\/printable.css":1,"0":1}}});</script>
 
-
+-->
 
  
 
@@ -127,7 +170,7 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
 </script>-->
 
 </head>
-<body class="html not-front not-logged-in one-sidebar sidebar-first page-node page-node- page-node-259 node-type-page i18n-ar lang-ar section-e-admission" style="background-color: white;" >
+<body class="html not-front not-logged-in one-sidebar sidebar-first page-node page-node- page-node-259 node-type-page i18n-ar lang-ar section-e-admission" >
   <div class="skip-link">
     <a href="#main-content" class="element-invisible element-focusable">تجاوز إلى المحتوى الرئيسي</a>
   </div>
@@ -174,12 +217,12 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
     <input type="hidden" value="1" name="ud">
     <input type="hidden" value="1" name="exclude_apps">
     <input type="hidden" value="https://dar.ksu.edu.sa" name="sk-domain" id="" class="form-control">
-  <!--  <input type="text" style="height: 35px; width: 100%;" aria-haspopup="true" aria-autocomplete="list" role="textbox" autocomplete="off" class="ui-autocomplete-input" name="sk-allwords" id="suggest" size="15">   -->     </div><!--
+   <!-- <input type="text" style="height: 35px; width: 100%;" aria-haspopup="true" aria-autocomplete="list" role="textbox" autocomplete="off" class="ui-autocomplete-input" name="sk-allwords" id="suggest" size="15">  -->      </div><!--
         <div class="small-5 columns" style="padding-right: 0px; padding-left: 0px">
               <button style="width: 52px; height: 35px; border: 0px none;" type="submit" value="ابحث" name="op" id="edit-submit" class="postfix small-4 columns form-submit sk-search">ابحث</button>
 
-        </div>-->
-                </div>
+        </div>
+-->                </div>
 
 </form>
 
@@ -231,10 +274,10 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
     <div class="navbar-collapse collapse">
       <div class="header-menu">
         <nav class="nav-main mega-menu" role="navigation">
-            <div class="top-bar-section"><ul class="right"><li class="first leaf"><a href="hompage.html">الرئيسية </a></li> <!-- Home page -->
+            <div class="top-bar-section"><ul class="right"><li class="first leaf"><a href="hompage2.html">الرئيسية </a></li> <!-- Home page -->
 <li class="expanded has-dropdown not-click"><a href="/ar/about">عن العمادة</a></li>
 
-<li class="leaf"><a href="lo_2Login.html">تسجيل الخروج</a></li>
+<li class="leaf"><a href="lo_Login.html">تسجيل الخروج</a></li>
 
 </div>        </nav>
       </div>
@@ -277,14 +320,18 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
   
   
      <!-- Right menu ********************************************************************************************* -->
-
-  <main role="main" class="row l-main">
+<main role="main" class="row l-main">
           <aside role="complementary" class="large-3 l-sidebar-first columns sidebar">
             <div class="block block-custom-ksu block-custom-ksu-sidebar-menu clearfix">
 
       
-      <ul class="menu"><li class="first expanded"><a href="requst.html">إضافة طلب جديد</a>
-<li class="expanded"><a href="talb.html">طلباتي</a>
+      <ul class="menu">
+        <li class="first expanded"><a href="requst2.html">إضافة طلب جديد</a>
+<li class="expanded"><a href="talb_2.html">طلباتي</a><li class="first expanded"><a href="New.html">الطلبات الواردة</a>
+            <li class="first expanded"><a href="convermor.html">الطلبات  المعالجة</a>
+ <li class="first expanded"><a href="End.html">الطلبات المنتهية</a>
+<li class="expanded"><a href="tfo_2.html">التفويض</a>
+
 <li class="last expanded"><a href="/ar/graduates">التقارير</a>
 
 </ul>
@@ -296,48 +343,99 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
       </main>
   <!--/.l-main-->
 
-
-
-<!-- change --> 
-<table align="center">
- <tr>
- <th rowspan="2">اسم الموظفة</th>
-  <td rowspan="2">نورة الدعيجي</td>
-  <th rowspan="2"> المسمى الوظيفي  </th>
-    <td rowspan="2"> رئيسة قسم المشاريع والتتطبيقات </td>
+<!--<h2 id="hh2">طلباتي</h2>-->
+<h2 style="margin-top: -30%; margin-bottom: 15%;
+ margin-right: 50%; color: #0084BD;"  >التفاويض السابقة</h2> <br>
+ <br><br><br><br><br>
+ <br><br><br><br><br>
+  <br><br>
+ 
+<table>
+  <tr>
+<th>الرقم التسلسلي</th>
+   <th>جهة الفويض</th>
+   <th>المفوّض إليه</th>
+    <th>تاريخ البدء</th>
+     <th>تاريخ الانتهاء</th>
+     
+   <th>    </th>
+   
+   
     
+ 
+    
+   
+  </tr>
+  
+  
+  <tr>
   
    
-  </tr>
-<tr></tr>
 
+    
+ 
 
-<tr>
-
-<th>الجهة التابعة لها</th>
-<td>عمادة التعاملات الإلكترونية والاتصالات</td>
- <th>  المرتبة</th>
-    <td> السابعة  </td>
+ <td>1</td>
+<td>قسم النطبيقات</td>
+<td>امل محمد</td>
+ <td>2019/6/10</td>
+    <td>2019/7/10</td> 
    
+    <td><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+    <i class="material-icons" >edit</i>
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+    <i class="material-icons" style="color: red;">delete</i>
     
     
-  </tr>
 
- <tr>
-    <th>الرقم الوظيفي</th>
- <td>237629041</td>
-    <th>البريد الالكتروني :</th>
-    <td>norah@ksu.edu.sa</td>
     
-    
+</td>
     
    
-    
+  
   </tr>
+  
+  <!-- end column -->
+
+  
+   <tr>
+  
+   
+ <td>2</td>
+<td>قسم الشبكات</td>
+<td>ندى خالد</td>
+<td>2019/4/20</td>
+    <td>27/5/2019</td> 
+    
+   
+
+    <td><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+    <i class="material-icons" >edit</i>
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+    <i class="material-icons" style="color: red;">delete</i>
+    
+    
+
+    
+</td>
+    
+
+  </tr>
+  
+  
+    <!-- end column -->
+
+  
+  
+  
 </table>
-
-
-
+<a href="tfo.html">
+ <button class="w3-button"  w3-green style="background-color: blue;margin-top: 1%;  margin-right: 25%;">إ<b>ضافة تفويض جديد</b></button>
+ 
 
 
 

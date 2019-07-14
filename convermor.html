@@ -10,7 +10,7 @@
 
 body{background-color: white;}
   
-table {
+ table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 70%;
@@ -24,9 +24,6 @@ td, th {
   padding: 8px;
 }
 
-tr:hover {
-  background-color:#E3E0D2;
-}
 
 .btn {
   background-color:   #0084BD  ;
@@ -49,15 +46,114 @@ tr:hover {
    margin-bottom:-0; 
 
 }
+
+
+
+
+
+
+
+
+
+
+.button_details {
+  font-size: 1em;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: lightgray;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup_details {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 50%;
+  height: 80%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  text-align: center;
+}
+
+
+.popup_details .close {
+  position: absolute;
+  top: 0px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 38px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup_details .close:hover {
+  color: #06D85F;
+}
+.popup_details .content {
+  max-height: 100%;
+  overflow: auto;
+}
+
+
+.table_popup {
+  font-family: arial, sans-serif;
+  width: 50%;
+  text-align: center;
+  font-size: 20px;
+}
+
+.td.popup {
+  border: 5px solid black;
+  text-align:center;
+  color: black;
+  padding: 8px;
+
+}
+
+.tr_popup:nth-child(even) {
+  background-color: white;
+}
+
+
+
+
+
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup_details{
+    width: 70%;
+  }
+
+
+
  #fotp{text-align: center;}
 
 </style>
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
-
-  <meta charset="utf-8" />
-<meta name="modified" content="2019-05-20" />
-<meta name="Created" content="2014-09-28" />
-<meta http-equiv="X-UA-Compatible" content="IE=9" />
 
   <meta charset="utf-8" />
 <meta name="modified" content="2019-05-20" />
@@ -84,11 +180,9 @@ tr:hover {
 
 
   <link rel="stylesheet" href="c1.css" />
-<link rel="stylesheet" href="c2.css" />
-<link rel="stylesheet" href="c3.css" />
+
 <link rel="stylesheet" href="c4.css" />
-<link rel="stylesheet" href="c5.css" media="print" />
-<!--<link rel="stylesheet" href="ctable.css" />-->
+<!--
   <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js" charset="UTF-8"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js" charset="UTF-8"></script><style media="screen">.page-header h3{
@@ -142,12 +236,12 @@ jQuery( this ).removeClass( "ui-corner-top" ).addClass( "ui-corner-all" );
 <script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"ar\/","ajaxPageState":{"theme":"zurbclean","theme_token":"X8NTSB-eppgqojGk0F_6E2zu8bTtAudSzkxS53AyM0I","js":{"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.7\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/custom\/custom_tree\/js\/tree.js":1,"sites\/all\/modules\/custom\/ksu_search\/js\/jquery-ui.js":1,"sites\/all\/modules\/contrib\/zurb_responsive_tables\/js\/responsive-tables.js":1,"public:\/\/languages\/ar_N-ry8G3pP-H3OQiJ2shRltkbG1H5ChGECq-AKhyjpHE.js":1,"0":1,"sites\/dar.ksu.edu.sa\/themes\/zurbclean\/js\/vendor\/custom.modernizr.js":1,"sites\/dar.ksu.edu.sa\/themes\/zurbclean\/js\/foundation.min.js":1,"sites\/all\/themes\/zurbksu2\/js\/scripts.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.base-rtl.css":1,"modules\/system\/system.menus-rtl.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.messages-rtl.css":1,"modules\/system\/system.theme.css":1,"modules\/system\/system.theme-rtl.css":1,"sites\/all\/modules\/contrib\/ldap\/ldap_user\/ldap_user.css":1,"sites\/all\/modules\/custom\/custom_tree\/css\/jquery-ui.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date-rtl.css":1,"modules\/field\/theme\/field.css":1,"modules\/field\/theme\/field-rtl.css":1,"sites\/all\/modules\/custom\/ksu_search\/css\/jquery-ui.css":1,"modules\/node\/node.css":1,"modules\/user\/user.css":1,"modules\/user\/user-rtl.css":1,"sites\/all\/modules\/contrib\/youtube\/css\/youtube.css":1,"sites\/all\/modules\/contrib\/zurb_responsive_tables\/css\/responsive-tables.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/views\/css\/views-rtl.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor-rtl.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/ldap\/ldap_servers\/ldap_servers.admin.css":1,"modules\/locale\/locale.css":1,"modules\/locale\/locale-rtl.css":1,"sites\/all\/themes\/zurb-foundation\/css\/normalize.css":1,"sites\/dar.ksu.edu.sa\/themes\/zurbclean\/css\/foundation.min.css":1,"sites\/dar.ksu.edu.sa\/themes\/zurbclean\/css\/app.css":1,"sites\/dar.ksu.edu.sa\/themes\/zurbclean\/css\/app-rtl.css":1,"sites\/all\/themes\/zurbksu2\/css\/font-awesome.min.css":1,"sites\/all\/themes\/zurbksu2\/css\/style.css":1,"sites\/all\/themes\/zurbksu2\/css\/style-rtl.css":1,"sites\/all\/themes\/zurbksu2\/css\/printable.css":1,"0":1}}});</script>
 
 
-
+-->
  
 
   <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <![endif]--><!--
 <script type="text/javascript">
 var _prum = [['id', '538471aeabe53d4e15aef7e2'],
              ['mark', 'firstbyte', (new Date()).getTime()]];
@@ -158,10 +252,10 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
     p.src = '//rum-static.pingdom.net/prum.min.js';
     s.parentNode.insertBefore(p, s);
 })();
-</script>
+</script>-->
 
 </head>
-<body class="html not-front not-logged-in one-sidebar sidebar-first page-node page-node- page-node-259 node-type-page i18n-ar lang-ar section-e-admission" >
+<body class="html not-front not-logged-in one-sidebar sidebar-first page-node page-node- page-node-259 node-type-page i18n-ar lang-ar section-e-admission" style="background-color: white;" >
   <div class="skip-link">
     <a href="#main-content" class="element-invisible element-focusable">تجاوز إلى المحتوى الرئيسي</a>
   </div>
@@ -208,11 +302,11 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
     <input type="hidden" value="1" name="ud">
     <input type="hidden" value="1" name="exclude_apps">
     <input type="hidden" value="https://dar.ksu.edu.sa" name="sk-domain" id="" class="form-control">
-    <input type="text" style="height: 35px; width: 100%;" aria-haspopup="true" aria-autocomplete="list" role="textbox" autocomplete="off" class="ui-autocomplete-input" name="sk-allwords" id="suggest" size="15">        </div>
-        <div class="small-5 columns" style="padding-right: 0px; padding-left: 0px">
+  <!--  <input type="text" style="height: 35px; width: 100%;" aria-haspopup="true" aria-autocomplete="list" role="textbox" autocomplete="off" class="ui-autocomplete-input" name="sk-allwords" id="suggest" size="15">  -->      </div>
+      <!--  <div class="small-5 columns" style="padding-right: 0px; padding-left: 0px">
               <button style="width: 52px; height: 35px; border: 0px none;" type="submit" value="ابحث" name="op" id="edit-submit" class="postfix small-4 columns form-submit sk-search">ابحث</button>
 
-        </div>
+        </div>-->
                 </div>
 
 </form>
@@ -265,10 +359,10 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
     <div class="navbar-collapse collapse">
       <div class="header-menu">
         <nav class="nav-main mega-menu" role="navigation">
-            <div class="top-bar-section"><ul class="right"><li class="first leaf"><a href="/ar">الرئيسية </a></li> <!-- Home page -->
+            <div class="top-bar-section"><ul class="right"><li class="first leaf"><a href="hompage2.html">الرئيسية </a></li> <!-- Home page -->
 <li class="expanded has-dropdown not-click"><a href="/ar/about">عن العمادة</a></li>
 
-<li class="leaf"><a href="https://news.ksu.edu.sa/ar/node/78282">تسجيل الخروج</a></li>
+<li class="leaf"><a href="lo_Login.html">تسجيل الخروج</a></li>
 
 </div>        </nav>
       </div>
@@ -311,16 +405,18 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
   
   
      <!-- Right menu ********************************************************************************************* -->
-
-<main role="main" class="row l-main">
+ <main role="main" class="row l-main">
           <aside role="complementary" class="large-3 l-sidebar-first columns sidebar">
             <div class="block block-custom-ksu block-custom-ksu-sidebar-menu clearfix">
 
       
-      <ul class="menu"><li class="first expanded"><a href="newor.html">الطلبات الجديدة</a>
-            <li class="first expanded"><a href="/ar/new-students">الطلبات المحوله</a>
+      <ul class="menu">
+        <li class="first expanded"><a href="requst2.html">إضافة طلب جديد</a>
+<li class="expanded"><a href="talb_2.html">طلباتي</a><li class="first expanded"><a href="New.html">الطلبات الواردة</a>
+            <li class="first expanded"><a href="convermor.html">الطلبات  المعالجة</a>
+ <li class="first expanded"><a href="End.html">الطلبات المنتهية</a>
+<li class="expanded"><a href="tfo_2.html">التفويض</a>
 
-<li class="expanded"><a href="/ar/continuing-students">التفويض</a>
 <li class="last expanded"><a href="/ar/graduates">التقارير</a>
 
 </ul>
@@ -332,84 +428,265 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
       </main>
   <!--/.l-main-->
 
-<!--<h2 id="hh2">طلباتي</h2>-->
 
-<table>
-  <tr>
-<th>الرقم التسلسلي</th>
-   <th>رقم الطلب</th>
-   <th>اسم الموظفة </th>
-   <th>الجهة</th>
-    <th>تاريخ الطلب</th>
-     <th>حالة الطلب</th>
-      <th>تفاصيل</th>
-    
-   
-   
-   
-    
- 
-    
+
+
+
+
+
+<!-- change --> 
+<h2 style="margin-top: -30%;
+ margin-right: 50%; color: #0084BD;"  >الطلبات المعالجة</h2> <br>
+ <br><br><br><br><br>
+ <br><br><br><br><br>
+  <br><br>
+<table align="center" style="margin-top: -15%;">
+ <tr>
+ <th rowspan="2">الرقم التسلسلي</th>
+  <th rowspan="2">رقم الطلب</th>
+  <th rowspan="2">اسم الموظفة</th>
+    <th rowspan="2">الجهه المنتقل منها</th>
+        <th rowspan="2">الجهه المنتقل إليها</th>
+
+    <th rowspan="2">تاريخ الطلب</th>
+    <th rowspan="2">تفاصيل</th>
+  
    
   </tr>
-  
-  
-  <tr>
-  
-   
+<tr></tr>
 
-    
- 
 
- <td>1</td>
-<td>190005</td>
-<td>أمل ناصر</td>
-<td>التعاملات الإلكترونية</td>
- <td>10/6/2019</td>
-    <td>محول  إلى مديرة الشون الادارية </td> 
-      <td> <button class="btn"><i class="fa fa-ellipsis-h"></i></button>
+<tr>
+
+  <td rowspan="2">1</td>
+  <td rowspan="2">123</td>
+  <td rowspan="2"> نوره ناصر</td>
+  <td rowspan="2"> كلية علوم الحاسب والمعلومات </td>
+   <td rowspan="2"> عمادة التعاملات الالكترونية والاتصالات  </td>
+  <td rowspan="2">2019/6/13</td>
+  <td rowspan="2"><button class="btn"><a class="button_details" href="#popup1"></a><i class="fa fa-ellipsis-h"></i></button></td>
+  </tr>
+</div>
 </td>
+</a>
+</div>
     
     
-
-
-    
-   
-  
   </tr>
-  
-  <!-- end column -->
-
-  
-   <tr>
-  
-   
- <td>2</td>
-<td>190038</td>
-<td>ندى احمد</td>
-<td>كلية التمريض</td>
-<td>20/4/2019</td>
-    <td>محول إلى كلية الطب</td> 
-    
-    
-      <td><button class="btn"><i class="fa fa-ellipsis-h"></i></button>
-</td>
  
-    
+<tr></tr>
 
+ <tr>
+    <td rowspan="2">2</td>
+    <td rowspan="2">237</td>
+    <td rowspan="2">أمل ماجد</td>
+    <td rowspan="2">كلية ادراة الاعمال</td>
+     <td rowspan="2"> كلية العلوم </td>
+    <td rowspan="2">2019/5/7</td>
+    <td rowspan="2"><button class="btn"><a class="button_details" href="#popup1"></a><i class="fa fa-ellipsis-h"></i></button></td>
   </tr>
-  
-  
-    <!-- end column -->
-
-  
-  
-  
 </table>
 
 
+<!-- ------------ --> 
+
+
+<div id="popup1" class="overlay">
+  <div class="popup_details"  style="height: 85%;
+    width: 55%";>
+
+    
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+    
+      
+      <table id="table_popup" style="margin-right: 2%;
+    width: 85%;
+    height: 60%%;
+    margin-top: 8%;">
+
+ <tbody>
+    <tr id="tr_popup">
+
+   <td id="td.popup">اسم الموظفة</td>
+   <td id="td.popup">ندى خالد</td> 
+
+  </tr>
+    
+    <tr id="tr_popup">
+
+   <td id="td.popup">الرقم الوظيفي</td>
+    <td id="td.popup">190786438</td>
+  
+  </tr>
+
+   <tr><td id="td.popup">المسمى الوظيفي</td>
+    <td id="td.popup">عضو هيئة تدريس</td>
+  
+  </tr>
+        
+          <tr id="tr_popup">
+
+   <td id="td.popup">سنة التعين</td>
+    <td id="td.popup">2010/2011</td>
+  
+  </tr>
+      <tr id="tr_popup">
+
+   <td id="td.popup">البريد الالكتروني</td>
+    <td id="td.popup">NadaKhaled@ksu.edu.sa</td>
+  
+  </tr>
+      <tr id="tr_popup">
+
+   <td id="td.popup">التخصص</td>
+    <td id="td.popup">تمريض</td>
+  
+  </tr>
+  
+  <tr id="tr_popup">
+
+   <td id="td.popup">رقم الطلب</td>
+    <td id="td.popup">190028</td>
+  
+  </tr>
+    
+    
  
 
+  <tr id="tr_popup">
+
+    <td id="td.popup">حالة الطلب</td>
+    <td id="td.popup">محول إلى وكيلة الكلية</td>
+
+  </tr>
+
+  <tr id="tr_popup">
+
+    <td id="td.popup">تاريخ الطلب</td>
+    <td id="td.popup">15 / 5 / 2019</td>
+  
+  </tr>
+  
+<tr id="tr_popup">
+
+    <td id="td.popup">المرئيات</td>
+     <td id="td.popup">القسم في حالة اكتفاء</td>
+  
+  </tr>
+  
+<tr id="tr_popup" >
+<td> <div style="background-color:white;color:black; text-align:right;">
+  <h2 style="font-size:22px;margin-top: -20px;"><b>سير الإجرات</b></h2>
+  
+  
+</div> 
+
+</td>
+<td >
+
+
+
+<table style="height: 60%;width: 90%; margin-top: 8%;margin-right: 8%; margin-left: 15%;">
+  <tr>
+    <th style="font-size:120%;">الإجرات</th>
+  <th style="font-size:120%;">المفوض إليه</th>
+    
+    <th style="font-size:120%;">التاريخ</th>
+    <th style="font-size:120%;">المرئيات</th>
+  </tr>
+  <tr>
+     <td>محول من مديرة الشؤون الادارية</td>
+   <td>لا يوجد</td>
+   
+    <td>1440/10/15</td>
+    <td>وجود  بديل</td>
+  </tr>
+  <tr>
+     <td>محول إلى عميدة الكليات الانسانية</td>
+   <td>مديرة الشؤون الادارية </td>
+   
+    <td>1440/10/17</td>
+    <td>لا يوجد</td>
+  </tr>
+  <tr>
+     <td>محول إلى وكيلة الكلية المتنقل إليها</td>
+   <td>لا يوجد</td>
+   
+    <td>1440/10/20</td>
+    <td>أكتفاء</td>
+  </tr>
+  
+
+</table>
+</td>
+
+
+
+</tr>
+<tr id="tr_popup">
+
+<td> <div style="background-color:white;color:black; text-align:right;">
+  <h2 style="font-size:22px;margin-top: -22px;"><b>سبب الإرجاع</b></h2>
+  
+
+</div> 
+
+</td>
+
+
+<td>
+
+
+
+  
+ <input type="text" name="firstname" value="" style="height: 70px;text-align:right;">
+  
+  
+ 
+
+
+
+</td></tr>
+
+
+</tbody>
+
+
+</table>
+      
+          
+     
+   <div style="
+    margin-left: auto;
+    margin-top: 5%;
+    margin-right: 5px;">
+
+    <button class="w3-button" w3-green style="
+    background-color: blue;
+    margin-right: 100px;
+    margin-top: -5px;"><b>طباعة</b></button></p>
+
+    </div>
+
+   <div style="
+    margin-left: auto;
+    margin-top: -11%;
+    margin-right: -90px;">
+
+    <button class="w3-button" w3-green style="
+    background-color: green;
+    margin-right: -90px;
+    margin-top: -15px;"><b>أرجاع </b></button>
+
+    </div>
+      
+    </div>
+        
+       
+  </div>
+    </div>
+  
 
 
 
@@ -428,7 +705,7 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
 <div class="footerh">
   <hr>
   <img src="logo.png" alt="KSU logo" width="25" height="35" align="middle">
- <p id="fotp"> تصميم وتطوير © جامعة الملك سعود 2019  </p>
+ <p id="fotp" style="text-align: center"> تصميم وتطوير © جامعة الملك سعود 2019  </p>
   <a href="https://twitter.com/_KSU/?subsite-footer"><img src="tw.png" alt="twitter logo" width="25" height="25">
   <a href="https://www.instagram.com/king_saud_university/"><img src="in.png" alt="instagram logo" width="25" height="25">
   <a href="https://www.youtube.com/user/pdksuchannel"><img src="yo.png" alt="youtube logo" width="25" height="25">

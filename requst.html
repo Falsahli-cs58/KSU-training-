@@ -1,11 +1,104 @@
 
-<!DOCTYPE html>
-<!-- Sorry no IE7 support! -->
-<!-- @see http://foundation.zurb.com/docs/index.html#basicHTMLMarkup -->
+<!-- the NewContact Screen -->
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" href="images/ksu.png" />
+<style>
+i {
+  font-size: 24px;
+  color:red;
+}
+#dataTable{
+  width: 700;
+}
+body {
+    background-color:#DCDCDC;
+    text-align: center
+}
+.styles
+{
+display: inline-block;
+background-color:white;
+  padding: 70px;
+  border-radius: 25px;
 
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head><style>
+}
+input[type=button], .like ,button{
+  background-color:#DCDCDC;
+    padding: 12px 28px;
+      text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+}
+</style>
+
+<SCRIPT language="javascript">
+    function addRow(tableID) {
+
+      var table = document.getElementById(tableID);
+
+      var rowCount = table.rows.length;
+      var row = table.insertRow(rowCount);
+
+      var cell1 = row.insertCell(0);
+      var element1 = document.createElement("input");
+      element1.type = "text";
+      element1.name="txtbox[]";
+      cell1.appendChild(element1);
+
+     var cell2 = row.insertCell(1);
+     // cell2.innerHTML = rowCount + 1;
+
+      var cell3 = row.insertCell(2);
+      var element2 = document.createElement("input");
+      element2.type = "text";
+      element2.name = "txtbox[]";
+      cell3.appendChild(element2);
+
+       var cell4 = row.insertCell(3);
+      var element3 = document.createElement("input");
+      element3.type = "text";
+      element3.name = "txtbox[]";
+      cell4.appendChild(element3);
+
+           var cell5 = row.insertCell(4);
+      var element4 = document.createElement("i");
+      var att = document.createAttribute("class");       // Create a "class" attribute
+att.value = "fa fa-close"; 
+element4.setAttributeNode(att);  
+      cell5.appendChild(element4);
+
+
+
+
+           var cell6 = row.insertCell(5);
+      var element5 = document.createElement("input");
+    element5.type = "button";
+    element5.value = "تعديل";
+
+      cell6.appendChild(element5);
+
+    }
+
+  </SCRIPT>
+<title>تقديم طلب جديد</title>
+<style>
+.max
+{
+
+  width:20%;
+  height: :20%;
+
+}
+select {
+  width:50%;
+}
+</style>
+
+
+<style>
     
 
 body{background-color: white;}
@@ -17,6 +110,8 @@ body{background-color: white;}
   align-self: right;
   margin-top: -15%;
  margin-right: 30%;
+   border: 1px solid white;
+
 }
 
 th, td {
@@ -27,15 +122,13 @@ th, td {
   width: 150px;
 }
 
-tr:hover {
-  background-color:#0084BD;
-}
+
 .footerh {
    position: auto;
    left: 0;
    bottom: 0;
    width: 100%;
-   padding: 70px;
+   padding: 90px;
    color: #0084BD;
    text-align: center;
    margin-bottom:-0; 
@@ -105,8 +198,8 @@ jQuery( this ).removeClass( "ui-corner-top" ).addClass( "ui-corner-all" );
 
 </script>
 <script src="//dar.ksu.edu.sa/sites/dar.ksu.edu.sa/files/js/js_V2KQFnTX2KQLb59mf_WGukB9bJJ7jv3ROyji0A-PsGM.js"></script>
-<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"ar\/","ajaxPageState":{"theme":"zurbclean","theme_token":"X8NTSB-eppgqojGk0F_6E2zu8bTtAudSzkxS53AyM0I","js":{"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.7\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/custom\/custom_tree\/js\/tree.js":1,"sites\/all\/modules\/custom\/ksu_search\/js\/jquery-ui.js":1,"sites\/all\/modules\/contrib\/zurb_responsive_tables\/js\/responsive-tables.js":1,"public:\/\/languages\/ar_N-ry8G3pP-H3OQiJ2shRltkbG1H5ChGECq-AKhyjpHE.js":1,"0":1,"sites\/dar.ksu.edu.sa\/themes\/zurbclean\/js\/vendor\/custom.modernizr.js":1,"sites\/dar.ksu.edu.sa\/themes\/zurbclean\/js\/foundation.min.js":1,"sites\/all\/themes\/zurbksu2\/js\/scripts.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.base-rtl.css":1,"modules\/system\/system.menus-rtl.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.messages-rtl.css":1,"modules\/system\/system.theme.css":1,"modules\/system\/system.theme-rtl.css":1,"sites\/all\/modules\/contrib\/ldap\/ldap_user\/ldap_user.css":1,"sites\/all\/modules\/custom\/custom_tree\/css\/jquery-ui.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date-rtl.css":1,"modules\/field\/theme\/field.css":1,"modules\/field\/theme\/field-rtl.css":1,"sites\/all\/modules\/custom\/ksu_search\/css\/jquery-ui.css":1,"modules\/node\/node.css":1,"modules\/user\/user.css":1,"modules\/user\/user-rtl.css":1,"sites\/all\/modules\/contrib\/youtube\/css\/youtube.css":1,"sites\/all\/modules\/contrib\/zurb_responsive_tables\/css\/responsive-tables.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/views\/css\/views-rtl.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor-rtl.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/ldap\/ldap_servers\/ldap_servers.admin.css":1,"modules\/locale\/locale.css":1,"modules\/locale\/locale-rtl.css":1,"sites\/all\/themes\/zurb-foundation\/css\/normalize.css":1,"sites\/dar.ksu.edu.sa\/themes\/zurbclean\/css\/foundation.min.css":1,"sites\/dar.ksu.edu.sa\/themes\/zurbclean\/css\/app.css":1,"sites\/dar.ksu.edu.sa\/themes\/zurbclean\/css\/app-rtl.css":1,"sites\/all\/themes\/zurbksu2\/css\/font-awesome.min.css":1,"sites\/all\/themes\/zurbksu2\/css\/style.css":1,"sites\/all\/themes\/zurbksu2\/css\/style-rtl.css":1,"sites\/all\/themes\/zurbksu2\/css\/printable.css":1,"0":1}}});</script>-->
-
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"ar\/","ajaxPageState":{"theme":"zurbclean","theme_token":"X8NTSB-eppgqojGk0F_6E2zu8bTtAudSzkxS53AyM0I","js":{"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.7\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/custom\/custom_tree\/js\/tree.js":1,"sites\/all\/modules\/custom\/ksu_search\/js\/jquery-ui.js":1,"sites\/all\/modules\/contrib\/zurb_responsive_tables\/js\/responsive-tables.js":1,"public:\/\/languages\/ar_N-ry8G3pP-H3OQiJ2shRltkbG1H5ChGECq-AKhyjpHE.js":1,"0":1,"sites\/dar.ksu.edu.sa\/themes\/zurbclean\/js\/vendor\/custom.modernizr.js":1,"sites\/dar.ksu.edu.sa\/themes\/zurbclean\/js\/foundation.min.js":1,"sites\/all\/themes\/zurbksu2\/js\/scripts.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.base-rtl.css":1,"modules\/system\/system.menus-rtl.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.messages-rtl.css":1,"modules\/system\/system.theme.css":1,"modules\/system\/system.theme-rtl.css":1,"sites\/all\/modules\/contrib\/ldap\/ldap_user\/ldap_user.css":1,"sites\/all\/modules\/custom\/custom_tree\/css\/jquery-ui.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date-rtl.css":1,"modules\/field\/theme\/field.css":1,"modules\/field\/theme\/field-rtl.css":1,"sites\/all\/modules\/custom\/ksu_search\/css\/jquery-ui.css":1,"modules\/node\/node.css":1,"modules\/user\/user.css":1,"modules\/user\/user-rtl.css":1,"sites\/all\/modules\/contrib\/youtube\/css\/youtube.css":1,"sites\/all\/modules\/contrib\/zurb_responsive_tables\/css\/responsive-tables.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/views\/css\/views-rtl.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor-rtl.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/ldap\/ldap_servers\/ldap_servers.admin.css":1,"modules\/locale\/locale.css":1,"modules\/locale\/locale-rtl.css":1,"sites\/all\/themes\/zurb-foundation\/css\/normalize.css":1,"sites\/dar.ksu.edu.sa\/themes\/zurbclean\/css\/foundation.min.css":1,"sites\/dar.ksu.edu.sa\/themes\/zurbclean\/css\/app.css":1,"sites\/dar.ksu.edu.sa\/themes\/zurbclean\/css\/app-rtl.css":1,"sites\/all\/themes\/zurbksu2\/css\/font-awesome.min.css":1,"sites\/all\/themes\/zurbksu2\/css\/style.css":1,"sites\/all\/themes\/zurbksu2\/css\/style-rtl.css":1,"sites\/all\/themes\/zurbksu2\/css\/printable.css":1,"0":1}}});</script>
+-->
 
 
  
@@ -125,7 +218,6 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
     s.parentNode.insertBefore(p, s);
 })();
 </script>-->
-
 </head>
 <body class="html not-front not-logged-in one-sidebar sidebar-first page-node page-node- page-node-259 node-type-page i18n-ar lang-ar section-e-admission" style="background-color: white;" >
   <div class="skip-link">
@@ -174,7 +266,7 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
     <input type="hidden" value="1" name="ud">
     <input type="hidden" value="1" name="exclude_apps">
     <input type="hidden" value="https://dar.ksu.edu.sa" name="sk-domain" id="" class="form-control">
-  <!--  <input type="text" style="height: 35px; width: 100%;" aria-haspopup="true" aria-autocomplete="list" role="textbox" autocomplete="off" class="ui-autocomplete-input" name="sk-allwords" id="suggest" size="15">   -->     </div><!--
+   <!-- <input type="text" style="height: 35px; width: 100%;" aria-haspopup="true" aria-autocomplete="list" role="textbox" autocomplete="off" class="ui-autocomplete-input" name="sk-allwords" id="suggest" size="15">  -->      </div> <!--
         <div class="small-5 columns" style="padding-right: 0px; padding-left: 0px">
               <button style="width: 52px; height: 35px; border: 0px none;" type="submit" value="ابحث" name="op" id="edit-submit" class="postfix small-4 columns form-submit sk-search">ابحث</button>
 
@@ -279,13 +371,29 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
      <!-- Right menu ********************************************************************************************* -->
 
   <main role="main" class="row l-main">
+      <h4 style="margin-right:50%;text-shadow: 1px 1px grey;
+">نموذج تقديم طلب نقل جديد</h4>
+
+<!--          *************************************FORM***********************************-->
+
+<!-- END OF FORM -->
+
+
+
+
+
+
+
           <aside role="complementary" class="large-3 l-sidebar-first columns sidebar">
             <div class="block block-custom-ksu block-custom-ksu-sidebar-menu clearfix">
 
-      
-      <ul class="menu"><li class="first expanded"><a href="requst.html">إضافة طلب جديد</a>
-<li class="expanded"><a href="talb.html">طلباتي</a>
-<li class="last expanded"><a href="/ar/graduates">التقارير</a>
+      <ul class="menu">
+        <li class="first expanded"><a href="requst.html">إضافة طلب جديد</a>
+
+
+     
+<li class="expanded"><a href="talb.html">طلباتي</a></li>
+<li class="last expanded"><a href="/ar/graduates">التقارير</a></li>
 
 </ul>
 <div class="styleSpacing"></div>
@@ -294,74 +402,166 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
     
 
       </main>
+
   <!--/.l-main-->
+  <div>
+  <br>
+<table style="width:750; border: 9px solid white;border-top:9px solid white">
 
+  <tr>
+    <td>اسم الموظفة </td>
 
+    <td><input type="text" name="firstname" /></td>
+ <td>الرقم الوظيفي</td>
 
-<!-- change --> 
-<table align="center">
- <tr>
- <th rowspan="2">اسم الموظفة</th>
-  <td rowspan="2">نورة الدعيجي</td>
-  <th rowspan="2"> المسمى الوظيفي  </th>
-    <td rowspan="2"> رئيسة قسم المشاريع والتتطبيقات </td>
-    
-  
-   
+    <td><input type="text" name="firstname" /></td>
   </tr>
-<tr></tr>
 
+  <tr>
+    <td>المسمى الوظيفي </td>
+    <td><input type="text" name="firstname" /></td>
+ <td>سنة التعيين</td>
+    <td><input type="text" name="firstname" /></td>
+  </tr>
+
+  <tr>
+    <td>طبيعة العمل الفعلي </td>
+    <td><input type="text" name="firstname" /></td>
+ <td>المرتبة</td>
+    <td><input type="text" name="firstname" /></td>
+  </tr>
+
+
+  <tr>
+    <td>التخصص </td>
+    <td><input type="text" name="firstname" /></td>
+ <td>المؤهل الدراسي</td>
+    <td><input type="text" name="firstname" /></td>
+  </tr>
 
 <tr>
-
-<th>الجهة التابعة لها</th>
-<td>عمادة التعاملات الإلكترونية والاتصالات</td>
- <th>  المرتبة</th>
-    <td> السابعة  </td>
-   
-    
-    
+    <td>البريد الالكتروني </td>
+    <td><input type="text" name="firstname" /></td>
+ <td>هاتف المكتب</td>
+    <td><input type="text" name="firstname" /></td>
   </tr>
 
- <tr>
-    <th>الرقم الوظيفي</th>
- <td>237629041</td>
-    <th>البريد الالكتروني :</th>
-    <td>norah@ksu.edu.sa</td>
-    
-    
-    
-   
-    
+<tr>
+    <td>رقم الجوال </td>
+    <td><input type="text" name="firstname" /></td>
+
   </tr>
+
+<tr>
+    <td>السيرة الذاتية </td>
+<td><input type="file" id="myFile" class="like"></td>
+  </tr>
+  
+<tr><td colspan="3">
+<p>جهات العمل خلال السنوات الخمس الماضية بدءاً بجهة العمل الحالية :</p></td>
+</tr>
+<tr>
+  <td>
+      <label>جهة العمل</label>
+<select>
+  <option>
+  </option>
+</select>
+</td>
+
+<td>
+   <label style="margin-right: 4%;
+    margin-top: 2%">من</label>
+ </td>
+<td>
+  <input type="date" style="margin-right: -84%;
+    margin-top: 12%"/>
+</td>
+
+<td>
+   <label style="margin-right: -80%;
+    margin-top: 3%">إلى</label>
+ </td>
+<td>
+  <input type="date" style="margin-right: -168%;
+    margin-top: 11%"/>
+</td>
+</tr>
+
+<tr>
+  <td>
+      <label style="margin-left:24px">القسم</label>
+<select>
+  <option>
+  </option>
+</select>
+</td></tr>
+<tr></tr>
+
+ <tr><td style="margin-bottom:30px"><INPUT type="button" value="إضافة جهة عمل" onclick="addRow('dataTable')" class="like"/></td>
+</tr>
+<tr><td></td></tr>
+
+<tr>
+<td colspan="4">
+<TABLE id="dataTable" width="10%" border="0" style="margin-top:20px;margin-right:1%" align="right">
+   
+
+   <tr>
+    <div style="margin-left:70px"><td>جهة العمل</td>
+    <td>القسم</td>
+    <td>من</td>
+    <td>إلى</td>
+    <td></td>
+    <td></td>
+  </div>
+  </tr>
+
+
+    <TR>
+   
+      <TD> <INPUT type="text" /> </TD>
+            <TD> <INPUT type="text" /> </TD>
+      <TD> <INPUT type="text" /> </TD>
+      <TD> <INPUT type="text" /9> </TD>
+     <td> <i class="fa fa-close"></i></td>
+<td><button>تعديل</button>
+    </TR>
+  </TABLE>
+
+
+</td>
+</tr>
+
+<tr>
+<td>
+<p style="text-align:right">مبررات نقل الموظفة</p>
+</td></tr>
+<tr>
+  <td colspan="4">
+ <p align="right" ><textarea  align="right" rows="6" cols="70" name="comment" form="usrform">
+Enter text here...</textarea></p>
+</td>
+</tr>
 </table>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="footerh">
-  <hr>
-  <img src="logo.png" alt="KSU logo" width="25" height="35" align="middle">
- <p id="fotp"> تصميم وتطوير © جامعة الملك سعود 2019  </p>
-  <a href="https://twitter.com/_KSU/?subsite-footer"><img src="tw.png" alt="twitter logo" width="25" height="25">
-  <a href="https://www.instagram.com/king_saud_university/"><img src="in.png" alt="instagram logo" width="25" height="25">
-  <a href="https://www.youtube.com/user/pdksuchannel"><img src="yo.png" alt="youtube logo" width="25" height="25">
-  <a href="https://www.facebook.com/King.Saud.University?subsite-footer"><img src="fa.png" alt="facebook logo" width="25" height="25">
 </div>
+
+
+
+<div style="margin-right:30%">
+  <p><input type="checkbox" name="vehicle1" value="Bike"> أقر بصحة البيانات المضافة</p></div>
+<table  style="margin-top:30px;border: 9px solid white;border-top:9px solid white">
+  <tr style="border: none">
+    <td><button>حفظ</button></td>
+    <td><button>إرسال</button></td>
+    <td><button>إلغاء</button></td>
+</tr>
+</table>
+</div>
+
+
+
+
 </body>
 </html>
