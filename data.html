@@ -23,33 +23,35 @@ src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
 src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script></head>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-
-
-
-
-    <style>
+<style>
     
 
 body{background-color: white;}
   
  table {
+  font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 50%;
-  border-spacing: 10px;
-  align-self: right;
-  margin-top: -15%;
- margin-right: 30%;
+  width: 70%;
+    margin-top: -15%;
+ margin-right: 25%; 
 }
 
-th, td {
-  padding: 8px;
+td, th {
+  border: 1px solid #dddddd;
   text-align: right;
-  border-bottom: 1px solid #ddd;
-  border-style: none;
-  width: 150px;
+  padding: 8px;
 }
+
+
+.btn {
+  background-color:   #0084BD  ;
+  border: none;
+  color: white;
+  padding: 7px 10px;
+  font-size: 90px;
+  cursor: pointer;
+}
+
 
 .footerh {
    position: auto;
@@ -62,6 +64,110 @@ th, td {
    margin-bottom:-0; 
 
 }
+
+
+
+
+
+
+
+
+
+
+.button_details {
+  font-size: 1em;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: lightgray;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup_details {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 50%;
+  height: 80%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  text-align: center;
+}
+
+
+.popup_details .close {
+  position: absolute;
+  top: 0px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 38px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup_details .close:hover {
+  color: #06D85F;
+}
+.popup_details .content {
+  max-height: 100%;
+  overflow: auto;
+}
+
+
+.table_popup {
+  font-family: arial, sans-serif;
+  width: 50%;
+  text-align: center;
+  font-size: 20px;
+}
+
+.td.popup {
+  border: 5px solid black;
+  text-align:center;
+  color: black;
+  padding: 8px;
+
+}
+
+.tr_popup:nth-child(even) {
+  background-color: white;
+}
+
+
+
+
+
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup_details{
+    width: 70%;
+  }
+
+
+
  #fotp{text-align: center;}
 
 </style>
@@ -70,6 +176,25 @@ th, td {
   <meta charset="utf-8" />
 <meta name="modified" content="2019-05-20" />
 <meta name="Created" content="2014-09-28" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+  <meta charset="utf-8" />
+<meta name="modified" content="2019-05-20" />
+<meta name="Created" content="2014-09-28" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+<link href="ccsc.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="iconcss.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
 
 
   <link rel="stylesheet" href="c1.css" />
@@ -182,7 +307,6 @@ th, td {
       <div class="header-menu">
         <nav class="nav-main mega-menu" role="navigation">
             <div class="top-bar-section"><ul class="right"><li class="first leaf"><a href="hompage.html">الرئيسية </a></li> <!-- Home page -->
-<li class="expanded has-dropdown not-click"><a href="/ar/about">عن العمادة</a></li>
 
 <li class="leaf"><a href="lo_2Login.html">تسجيل الخروج</a></li>
 
@@ -229,12 +353,18 @@ th, td {
      <!-- Right menu ********************************************************************************************* -->
 
   <main role="main" class="row l-main">
+   
           <aside role="complementary" class="large-3 l-sidebar-first columns sidebar">
             <div class="block block-custom-ksu block-custom-ksu-sidebar-menu clearfix">
 
       
-      <ul class="menu"><li class="first expanded"><a href="requst.html">إضافة طلب جديد</a>
-<li class="expanded"><a href="talb.html">طلباتي</a>
+      <ul class="menu">
+        <li class="first expanded"><a ht2.html">إضافة طلب جديد</a>
+<li class="expanded"><a href="talb_2.html">طلباتي</a><li class="first expanded"><a href="New.html">الطلبات الواردة</a>
+            <li class="first expanded"><a href="convermor.html">الطلبات  المعالجة</a>
+ <li class="first expanded"><a href="End.html">الطلبات المنتهية</a>
+<li class="expanded"><a href="tfo_2.html">التفويض</a>
+<li class="expanded"><a href="#">إضافة صلاحيات</a>
 <li class="last expanded"><a href="/ar/graduates">التقارير</a>
 
 </ul>
@@ -244,105 +374,210 @@ th, td {
     
 
       </main>
+
   <!--/.l-main-->
 
- <div class="myown" style="padding:30px;position: center;margin-right:280px">
- 
+<div class="hi" style="position:absolute;margin-top:-25%">
 
+
+
+ <div class="myown" style="padding:30px;position: center;margin-right:280px;
+ ">
+ 
 
 
 <div id="myTable_wrapper" class="dataTables_wrapper no-footer"><div id="myTable_filter" class="dataTables_filter" style="margin-top:-10%;margin-bottom:0%;float:right"><label>بحث:<input type="search" class="" placeholder="" aria-controls="myTable"></label></div>
 
-<div style="margin-top:-10%">
-<label style="float:right;margin-left:3%">من : </label>
+<div style="margin-top:-10%;">
+<label style="float:right;margin-left:3%;position:absolute;margin-top:-5%;margin-right:37%">من : </label>
 
- <div style="float:right;margin-left:4%"><input type="date" name="bday" style="width:90px"></div>
+ <div style="float:right;margin-left:4%;margin-right:10%;margin-top:-6%"><input type="date" name="bday" style="width:90px"></div>
 
- <label style="float:right;margin-left:0%"> إلى :</label>
-<div style="float:left; margin-left: 64%"><input type="date" name="bday" style="width:90px"></div>
-
-
-</div>
-   <form><button type="submit" style="float:left;margin-left:50%;margin-top:-7%;margin-right:-5%;height:50px"><i class="fa fa-search"></i></button></form>
-
-
-
-
-
-
-
-<table id="myTable" class="table table-striped dataTable no-footer" style="margin-right:160px;margin-left:80% !important;    width: 80%;
-" role="grid" aria-describedby="myTable_info">
-        <thead>  
-          <tr role="row"><th style="width: 141px;" class="sorting_asc" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="الرقم الوظيفي: activate to sort column ascending">الرقم الوظيفي</th><th class="sorting" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1" aria-label="اسم الموظفة: activate to sort column ascending" style="width: 141px;">اسم الموظفة</th><th class="sorting" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1" aria-label="رقم الطلب: activate to sort column ascending" style="width: 142px;">رقم الطلب</th><th class="sorting" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1" aria-label="تاريخ الطلب : activate to sort column ascending" style="width: 141px;">تاريخ الطلب </th><th class="sorting" tabindex="0" aria-controls="myTable" rowspan="1" colspan="1" aria-label="حالة الطلب: activate to sort column ascending" style="width: 141px;">حالة الطلب</th></tr>  
-        </thead>  
-        <tbody>  
-          
-
-           
-        <tr role="row" class="odd">  
-                                                    <td class="sorting_1">104382888</td> 
-                                                               <td>أريج العنزي </td>
-                                                                      <td>255348290</td>  
-                                                                         <td>2018/7/1</td> 
-
-
-              <td>مرفوض </td>
-                         
-                        
-
-                 
-
-
-         </tr><tr role="row" class="even">  
-                   <td class="sorting_1">1102222222</td> 
-                  <td>ريما القاضي </td>
-                    <td>281112794</td>  
-                    <td>2018/1/1</td> 
-               <td>مقبول </td>
-
-                          
-
-                           
-                                      
-
-
-         </tr></tbody>  
-      </table><div class="dataTables_info" id="myTable_info" role="status" aria-live="polite">عرض 1 من 2  من 2 العناصر</div><div class="dataTables_paginate paging_simple_numbers" id="myTable_paginate"><a class="paginate_button previous disabled" aria-controls="myTable" data-dt-idx="0" tabindex="0" id="myTable_previous">قبل</a><span><a class="paginate_button current" aria-controls="myTable" data-dt-idx="1" tabindex="0">1</a></span><a class="paginate_button next disabled" aria-controls="myTable" data-dt-idx="2" tabindex="0" id="myTable_next">بعد</a></div></div>
-
-
-
+ <label style="float:right;margin-left:0%;margin-right:31%;margin-top:-9%;"> إلى :</label>
+<div style="float:left; margin-left: 9%;margin-top:-11%"><input type="date" name="bday" style="width:90px"></div>
 
 
 </div>
+   <form><button type="submit" style="float:left;margin-left:38%;margin-top:-7%;margin-right:31%;height:45px;position:absolute;border: 1px solid #dddddd;"><i class="fa fa-search"></i></button></form>
 
 
 
+
+
+<!-- change --> 
+
+<table align="center" style="width:850;margin-right: 10%">
+ <tr>
+ <th rowspan="2">الرقم الوظيفي</th>
+  <th rowspan="2">اسم الموظفة</th>
+  <th rowspan="2">رقم الطلب</th>
+    <th rowspan="2">تاريخ الطلب</th>
+     <th rowspan="2">حالة الطلب</th>
+    <th rowspan="2">تفاصيل الطلب</th>
+  
+   
+  </tr>
+<tr></tr>
+
+
+<tr>
+
+  <td rowspan="2">110453333</td>
+  <td rowspan="2">ريما القاضي</td>
+    <td rowspan="2">104355555</td>
+  <td rowspan="2">2019/7/1</td>
+  <td rowspan="2">معتمد</td>
+  <td rowspan="2"><button class="btn"><a class="button_details" href="#popup1"></a><i class="fa fa-ellipsis-h"></i></button></td>
+  </tr>
+</div>
+</td>
+</a>
+</div>
+    
+    
+  </tr>
+ 
+<tr></tr>
+
+
+<tr>
+
+  <td rowspan="2">110222222</td>
+  <td rowspan="2">شيماء الصعب</td>
+    <td rowspan="2">105555888</td>
+  <td rowspan="2">2019/6/1</td>
+  <td rowspan="2">معتمد</td>
+  <td rowspan="2"><button class="btn"><a class="button_details" href="#popup1"></a><i class="fa fa-ellipsis-h"></i></button></td>
+  </tr>
+</table>
+
+
+<!-- ------------ --> 
+
+
+<div id="popup1" class="overlay">
+  <div class="popup_details"  style="height: 85%;
+    width: 55%";>
+
+    
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+    
+      
+      <table id="table_popup" style="margin-right: 2%;
+    width: 85%;
+    height: 60%%;
+    margin-top: 8%;">
+
+ <tbody>
+    <tr id="tr_popup">
+
+   <td id="td.popup">اسم الموظفة</td>
+   <td id="td.popup">ندى خالد</td> 
+
+  </tr>
+    
+    <tr id="tr_popup">
+
+   <td id="td.popup">الرقم الوظيفي</td>
+    <td id="td.popup">190786438</td>
+  
+  </tr>
+
+   <tr><td id="td.popup">المسمى الوظيفي</td>
+    <td id="td.popup">عضو هيئة تدريس</td>
+  
+  </tr>
+        
+          <tr id="tr_popup">
+
+   <td id="td.popup">سنة التعين</td>
+    <td id="td.popup">2010/2011</td>
+  
+  </tr>
+      <tr id="tr_popup">
+
+   <td id="td.popup">البريد الالكتروني</td>
+    <td id="td.popup">NadaKhaled@ksu.edu.sa</td>
+  
+  </tr>
+      <tr id="tr_popup">
+
+   <td id="td.popup">التخصص</td>
+    <td id="td.popup">أدارة اعمال</td>
+  
+  </tr>
+  
+  <tr id="tr_popup">
+
+   <td id="td.popup">رقم الطلب</td>
+    <td id="td.popup">190028</td>
+  
+  </tr>
+    
+    
+ 
+
+  <tr id="tr_popup">
+
+    <td id="td.popup">حالة الطلب</td>
+    <td id="td.popup">معتمد</td>
+
+  </tr>
+
+  <tr id="tr_popup">
+
+    <td id="td.popup">تاريخ الطلب</td>
+    <td id="td.popup">15 / 5 / 2019</td>
+  
+  </tr>
+ 
+<tr id="tr_popup">
+
+    <td id="td.popup">المرئيات</td>
+    <td id="td.popup">تم قبول الطلب</td>
+  
+  </tr>
+     
+   
+</tbody>
+
+
+</table>
+   <button class="w3-button w3-blue" style="background-color:blue;margin-right: 1%;margin-top:2%;"><b>طباعة</b></button>   
+      
+
+      
+    </div>
+        
+       
+  </div>
+    </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br>
 
 <div class="footerh">
   <hr>
+
   <img src="logo.png" alt="KSU logo" width="25" height="35" align="middle">
- <p id="fotp"> تصميم وتطوير © جامعة الملك سعود 2019  </p>
+ <p id="fotp" style="text-align: center"> تصميم وتطوير © جامعة الملك سعود 2019  </p>
   <a href="https://twitter.com/_KSU/?subsite-footer"><img src="tw.png" alt="twitter logo" width="25" height="25">
   <a href="https://www.instagram.com/king_saud_university/"><img src="in.png" alt="instagram logo" width="25" height="25">
-  <a href="https://www.youtube.com/user/pdksuchannel"><img src="yo.png" alt="youtube logo" width="25" height="25"></a>
-  <a href="https://www.facebook.com/King.Saud.University?subsite-footer"><img src="fa.png" alt="facebook logo" width="25" height="25"> </a> </div>
-
-
-<!------------------>
-
-
-
-
-
-
-
- 
-<script>
-$(document).ready(function(){
-    $('#myTable').dataTable();
-});
-</script>
-    
-    </body>
-    </html>
+  <a href="https://www.youtube.com/user/pdksuchannel"><img src="yo.png" alt="youtube logo" width="25" height="25">
+  <a href="https://www.facebook.com/King.Saud.University?subsite-footer"><img src="fa.png" alt="facebook logo" width="25" height="25">
+</div>
+</body>
+</html>
