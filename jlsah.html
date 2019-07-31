@@ -11,9 +11,70 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-    
+    .btn2 {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 9px 28px;
+  cursor: pointer;
+  font-size: 15px;
+  width: 80%;
+  height: 15%;
+
+}
+
+.checkmark {
+
+
+  text-align: center;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Darker background on mouse-over */
+.btn2:hover {
+  background-color: RoyalBlue;
+}
 
 body{background-color: white;}
   
@@ -407,8 +468,8 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
     <div class="navbar-collapse collapse">
       <div class="header-menu">
         <nav class="nav-main mega-menu" role="navigation">
-            <div class="top-bar-section"><ul class="right"><li class="first leaf"><a href="hompage2.html">الرئيسية </a></li> <!-- Home page -->
-<li class="expanded has-dropdown not-click"><a href="/ar/about">عن العمادة</a></li>
+            <div class="top-bar-section"><ul class="right"><li class="first leaf"><a href="hompage3.html">الرئيسية </a></li> <!-- Home page -->
+
 
 <li class="leaf"><a href="lo_Login.html">تسجيل الخروج</a></li>
 
@@ -453,8 +514,7 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
   
   
      <!-- Right menu ********************************************************************************************* -->
-
- <main role="main" class="row l-main">
+<main role="main" class="row l-main">
           <aside role="complementary" class="large-3 l-sidebar-first columns sidebar">
             <div class="block block-custom-ksu block-custom-ksu-sidebar-menu clearfix">
 
@@ -464,9 +524,9 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
 <li class="expanded"><a href="ghrar.html">قرار اللجنة</a>
   <li class="first expanded"><a href="jlsah.html">الجلسات </a>
        
-<li class="expanded"><a href="tfo_2.html">التفويض</a>
+<li class="expanded"><a href="tfo_3.html">التفويض</a>
 
-<li class="last expanded"><a href="/ar/graduates">التقارير</a>
+<li class="last expanded"><a href="data_2.html">التقارير</a>
 
 </ul>
 <div class="styleSpacing"></div>
@@ -505,7 +565,7 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
 </div>
 </table>
 
-<!------------------------------------------------------------------------->
+<!--------------------------table 1 ----------------------------------------------->
 
 
 
@@ -547,44 +607,21 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
 
 <tr>
 
-  <td rowspan="9" style="width: 15%; text-align: center;border: 1px solid #dddddd;
-  
-  padding: 8px;">1</td>
-  <td  rowspan="9"style="text-align: center;border: 1px solid #dddddd;
-
-  padding: 8px;">2019/4/22</td>
-
-<td  rowspan="9"style="text-align: center;border: 1px solid #dddddd;
-  
-  padding: 8px;">منتهية</td>
-<td  style="text-align: center;border: 1px solid #dddddd;
-  
-  padding: 8px;">345678</td>
- 
-  <td  style="text-align: center;border: 1px solid #dddddd;
-
-  padding: 8px;"><button class="btn"><a class="button_details" href="#popup1"></a><i class="fa fa-ellipsis-h"></i></button></td>
-  <td rowspan="9" style="text-align: center;border: 1px solid #dddddd;
-
-  padding: 8px;"><button class="btn"><a class="button_details" href="#popup2"></a><i class="fa fa-ellipsis-h"></i></button></td>
-  <td rowspan="9"  style="text-align: center;border: 1px solid #dddddd;
-
-  padding: 8px;">
+<td rowspan="9" style="width: 15%; text-align: center;border: 1px solid #dddddd;padding: 8px;">1</td>
+<td  rowspan="9"style="text-align: center;border: 1px solid #dddddd;padding: 8px;">2019/4/22</td>
+<td  rowspan="9"style="text-align: center;border: 1px solid #dddddd;padding: 8px;">منتهية</td>
+<td  style="text-align: center;border: 1px solid #dddddd;padding: 8px;">345678</td>
+<td  style="text-align: center;border: 1px solid #dddddd;padding: 8px;"><button class="btn"><a class="button_details" href="#popup1"></a><i class="fa fa-ellipsis-h"></i></button></td>
+<td rowspan="9" style="text-align: center;border: 1px solid #dddddd;padding: 8px;"><button class="btn"><a class="button_details" href="#popup2"></a><i class="fa fa-ellipsis-h"></i></button></td>
+<td rowspan="9"  style="text-align: center;border: 1px solid #dddddd;padding: 8px;">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  
-    <i class="material-icons" >edit</i>
+    <i class="material-icons" ><a class="button_details" href="#popup4"></a><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">edit</i>
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  
-    <i class="material-icons" style="color: red;">delete</i>
-    </td>
-  <tr></tr>
-  <td  style="text-align: center;border: 1px solid #dddddd;
-
-  padding: 8px;">901278</td>
+    <i class="material-icons" style="color: red;">delete</i></td>
+  </tr>
+  <td  style="text-align: center;border: 1px solid #dddddd;padding: 8px;">901278</td>
  
-  <td  style="text-align: center;border: 1px solid #dddddd;
-  
-  padding: 8px;"><button class="btn"><a class="button_details" href="#popup1"></a><i class="fa fa-ellipsis-h"></i></button></td>
+  <td  style="text-align: center;border: 1px solid #dddddd;padding: 8px;"><button class="btn"><a class="button_details" href="#popup1"></a><i class="fa fa-ellipsis-h"></i></button></td>
   <tr></tr>
   <td  style="text-align: center;border: 1px solid #dddddd;
   
@@ -598,9 +635,7 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
   
   padding: 8px;">192678</td>
  
-  <td  style="text-align: center;border: 1px solid #dddddd;
-  
-  padding: 8px;"><button class="btn"><a class="button_details" href="#popup1"></a><i class="fa fa-ellipsis-h"></i></button></td>
+  <td  style="text-align: center;border: 1px solid #dddddd;padding: 8px;"><button class="btn"><a class="button_details" href="#popup1"></a><i class="fa fa-ellipsis-h"></i></button></td>
   <tr></tr>
   <td  style="text-align: center;border: 1px solid #dddddd;
   
@@ -684,16 +719,14 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
 
 <td rowspan="9" style="text-align: center;border: 1px solid #dddddd;
   
-  padding: 8px;"><button class="btn"><a class="button_details" href="#popup1"></a><i class="fa fa-ellipsis-h"></i></button></td>
+  padding: 8px;"><button class="btn"><a class="button_details" href="#popup3"></a><i class="fa fa-ellipsis-h"></i></button></td>
 
   <td rowspan="9"  style="text-align: center;border: 1px solid #dddddd;
 
   padding: 8px;">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  
-    <i class="material-icons" >edit</i>
+    <i class="material-icons" ><a class="button_details" href="#popup5"></a><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">edit</i>
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  
     <i class="material-icons" style="color: red;">delete</i>
     </td>
   <tr></tr>
@@ -989,7 +1022,7 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
 <td colspan="2"> 
 
 
-<table style="width: 100%; margin-top: 8%;margin-right: 8%; margin-left: 15%;     border: 1px solid #dddddd;
+<table style="width: 115%; margin-top: 8%;margin-right: -4%; margin-left: 25%;     border: 1px solid #dddddd;
  ">
   <tr style="    border: 1px solid #dddddd;">
     <th style="font-size:120%;">الرقم التسلسلي</th>
@@ -999,6 +1032,8 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
     <th style="font-size:120%;">تاريخ الطلب </th>
     <th style="font-size:120%;">الجهة المنتقل منها </th>
     <th style="font-size:120%;">الجهة المنتقل إليها </th>
+    <th style="font-size:120%;">قرار اللجنة </th>
+    <th style="font-size:120%;">محضر اللجنة </th>
   </tr>
   <tr style="    border: 1px solid #dddddd;">
      <td>1</td>
@@ -1006,7 +1041,12 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
    <td>349876</td>
     <td>2019/1/15</td>
     <td>كلية علوم الحاسب والمعلومات </td>
-    <td>كلية العلوم </td>
+  <td>كلية العلوم </td>
+       <td>مقبول </td>
+          <td><button class="btn2"><i class="fa fa-download" style="width: 100%;"></i> <b>تنزيل</b></button>
+ 
+</td>
+
   </tr>
   <tr style="    border: 1px solid #dddddd;">
      <td>2</td>
@@ -1015,6 +1055,11 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
     <td>2019/3/22</td>
     <td>كلية التربية </td>
     <td>كلية الآداب</td>
+        <td>مقبول</td>
+          <td><button class="btn2"><i class="fa fa-download" style="width: 100%;"></i> <b>تنزيل</b></button>
+
+</td>
+
   </tr>
   <tr style="    border: 1px solid #dddddd;">
      <td>3</td>
@@ -1023,6 +1068,11 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
     <td>2019/2/25</td>
    <td>كلية ادارة الاعمال </td>
     <td>كلية العلوم </td>
+         <td>مرفوض </td>
+          <td><button class="btn2"><i class="fa fa-download" style="width: 100%;"></i> <b>تنزيل</b></button>
+
+</td>
+
   </tr>
   <tr style="    border: 1px solid #dddddd;">
      <td>4</td>
@@ -1031,6 +1081,11 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
     <td>2019/1/29</td>
     <td>عمادة التعاملات الالكترونية والاتصالات </td>
     <td>كلية ادارة الاعمال </td>
+        <td>مقبول بشرط </td>
+          <td><button class="btn2"><i class="fa fa-download" style="width: 100%;"></i> <b>تنزيل</b></button>
+
+</td>
+
   </tr><tr style="    border: 1px solid #dddddd;">
      <td>5</td>
    <td>الجوهره ناصر</td>
@@ -1038,6 +1093,11 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
     <td>2019/1/15</td>
     <td>كلية العلوم </td>
     <td>كلية علوم الحاسب والمعلومات </td>
+         <td>مقبول بشرط </td>
+          <td><button class="btn2"><i class="fa fa-download" style="width: 100%;"></i> <b>تنزيل</b></button>
+
+</td>
+
   </tr>
   
 
@@ -1056,47 +1116,674 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
 </table>
        
      
-   <div style="
-    margin-left: auto;
-    margin-top: 5%;
-    margin-right: 5px;">
+
 
     <button class="w3-button" w3-green style="
     background-color: blue;
     margin-right: 250px;
-    margin-top: -3px;"><b>طباعة</b></button></p>
+    "><b>طباعة</b></button></p>
 
-    </div>
 
-   <div style="
-    margin-left: auto;
-    margin-top: -11%;
-    margin-right: -30px;">
-
+<div style="    margin-right: -30px;
+    margin-top: -10.2%;">
     <button class="w3-button" w3-green style="
     background-color: green;
-    margin-right: -30px;
-    margin-top: -15px;"><b>تصدير  Excel</b></button>
-
-    </div>
+     "><b>تصدير  Excel</b></button>
+</div>
 
 
    <div style="
-    margin-left: auto;
-    margin-top: -9%;
-    margin-right: -190px;">
+       margin-left: auto;
+    margin-top: -10.3%;
+    margin-right: -346px;">
 
     <button class="w3-button" w3-green style="background-color:#ccccb3;color:black ;
-    margin-right: -190px;
-    margin-top: -9px;"><b>تصدير  PDF</b></button>
+  "><b>تصدير  PDF</b></button>
 
     </div>
-  
-     </div>  
   </div>
-    </div>
+</div>
+</div>
+</td>
+  <!----------------------------- pup up 3 ------------*************************----------------------------------->
+
+
+
+<div id="popup3" class="overlay">
+  <div class="popup_details"  style="height: 85%;
+    width: 55%";>
+
+    
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+    
+      
+      <table id="table_popup" style="margin-right: 2%;
+    width: 85%;
+    height: 60%%;
+    margin-top: 8%;">
+
+ <tbody>
+    <tr id="tr_popup">
+
+   <td id="td.popup" style="text-align: center;  "> <h4>رقم الجلسة :</h4></td>
+   <td id="td.popup" style="text-align: right; " ><h4>2</h4></td> 
+
+  </tr>
+    
+    <tr id="tr_popup">
+
+   <td id="td.popup" style="text-align: center;  "><h4>تاريخ الجلسة :</h4></td>
+    <td id="td.popup" style="text-align: right; " ><h4>2019/6/13</h4></td>
+  
+  </tr>
+
+   <tr id="tr_popup">
+    <td id="td.popup" style="text-align: center;  "><h4>عدد الطلبات :</h4></td>
+    <td id="td.popup" style="text-align: right; "><h4>5</h4></td>
+  
+  </tr>
+        
+   
+  <!--------------------------------------------------------------------------->
+<tr id="tr_popup" >
+<td colspan="2"> 
+
+
+<table style="width: 115%; margin-top: 8%;margin-right: -4%; margin-left: 25%;     border: 1px solid #dddddd;
+ ">
+  <tr style="    border: 1px solid #dddddd;">
+    <th style="font-size:120%;">الرقم التسلسلي</th>
+  <th style="font-size:120%;">اسم الموظفة</th>
+    
+    <th style="font-size:120%;">رقم الطلب</th>
+    <th style="font-size:120%;">تاريخ الطلب </th>
+    <th style="font-size:120%;">الجهة المنتقل منها </th>
+    <th style="font-size:120%;">الجهة المنتقل إليها </th>
+   <!-- <th style="font-size:120%;">قرار اللجنة </th>
+    <th style="font-size:120%;">محضر اللجنة </th>-->
+  </tr>
+  <tr style="    border: 1px solid #dddddd;">
+     <td>1</td>
+   <td>ندى خالد </td>
+   <td>349876</td>
+    <td>2019/1/15</td>
+    <td>كلية علوم الحاسب والمعلومات </td>
+  <td>كلية العلوم </td>
+     <!--  <td>مقبول </td>
+          <td><button class="btn2"><i class="fa fa-download" style="width: 100%;"></i> <b>تنزيل</b></button>
+ 
+</td>-->
+
+  </tr>
+  <tr style="    border: 1px solid #dddddd;">
+     <td>2</td>
+   <td>ليلى ناصر </td>
+   <td>679896</td>
+    <td>2019/3/22</td>
+    <td>كلية التربية </td>
+    <td>كلية الآداب</td>
+       <!--  <td>مقبول</td>
+          <td><button class="btn2"><i class="fa fa-download" style="width: 100%;"></i> <b>تنزيل</b></button>
+
+</td>-->
+
+  </tr>
+  <tr style="    border: 1px solid #dddddd;">
+     <td>3</td>
+   <td>ساره محمد </td>
+   <td>349876</td>
+    <td>2019/2/25</td>
+   <td>كلية ادارة الاعمال </td>
+    <td>كلية العلوم </td>
+     <!--    <td>مرفوض </td>
+          <td><button class="btn2"><i class="fa fa-download" style="width: 100%;"></i> <b>تنزيل</b></button>
+
+</td>-->
+
+  </tr>
+  <tr style="    border: 1px solid #dddddd;">
+     <td>4</td>
+   <td>نوره علي </td>
+   <td>195676</td>
+    <td>2019/1/29</td>
+    <td>عمادة التعاملات الالكترونية والاتصالات </td>
+    <td>كلية ادارة الاعمال </td>
+    <!--     <td>مقبول بشرط </td>
+          <td><button class="btn2"><i class="fa fa-download" style="width: 100%;"></i> <b>تنزيل</b></button>
+
+</td>-->
+
+  </tr><tr style="    border: 1px solid #dddddd;">
+     <td>5</td>
+   <td>الجوهره ناصر</td>
+   <td>349876</td>
+    <td>2019/1/15</td>
+    <td>كلية العلوم </td>
+    <td>كلية علوم الحاسب والمعلومات </td>
+    <!--     <td>مقبول بشرط </td>
+          <td><button class="btn2"><i class="fa fa-download" style="width: 100%;"></i> <b>تنزيل</b></button>
+
+</td>-->
+
+  </tr>
+  
+
+</table>
+</td>
+
+
+
+</tr>
+<!------------------------------------------------------------------------------->
+
+
+</tbody>
+
+
+</table>
+       
+     
+
+
+    <button class="w3-button" w3-green style="
+    background-color: blue;
+    margin-right: 250px;
+    "><b>طباعة</b></button></p>
+
+
+<div style="    margin-right: -30px;
+    margin-top: -10.2%;">
+    <button class="w3-button" w3-green style="
+    background-color: green;
+     "><b>تصدير  Excel</b></button>
 </div>
 
+
+   <div style="
+       margin-left: auto;
+    margin-top: -10.3%;
+    margin-right: -346px;">
+
+    <button class="w3-button" w3-green style="background-color:#ccccb3;color:black ;
+  "><b>تصدير  PDF</b></button>
+
+    </div>
+  </div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+
+<!-- -----pup up 4  ***************************************************************************************---- --> 
+
+
+<div id="popup4" class="overlay">
+  <div class="popup_details"  style="height: 85%;
+    width: 55%";>
+
+    
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+    
+      
+      <table id="table_popup" style="margin-right: 2%;
+    width: 85%;
+    height: 60%%;
+    margin-top: 8%;">
+
+ <tbody>
+    <tr id="tr_popup">
+
+   <td id="td.popup" style="text-align: center;  "> <h4>رقم الجلسة :</h4></td>
+   <td id="td.popup" style="text-align: right; " ><input type="text" id="myInput" onkeyup="myFunction()" placeholder="1" title="Type in a name" style="margin-top: 10%;" ></td> 
+
+  </tr>
+    
+    <tr id="tr_popup">
+
+   <td id="td.popup" style="text-align: center;  "><h4>تاريخ الجلسة :</h4></td>
+    <td id="td.popup" style="text-align: right; " >  <input  type="date" id="myInput"/></td>
+  
+  </tr>
+
+   <tr id="tr_popup">
+    <td id="td.popup" style="text-align: left; margin-top: 12%;   "><h2 style="color: blue; ">الطلبات المضافة </h2></td>
+    
+  
+  </tr>
+  <!--------------------------------------------------------------------------->
+<tr id="tr_popup" >
+<td colspan="2"> 
+
+
+<table style="width: 115%; margin-top:0%;margin-right: -4%; margin-left: 25%;     border: 1px solid #dddddd;
+ ">
+  <tr style="    border: 1px solid #dddddd;">
+    <th style="font-size:120%;">الرقم التسلسلي</th>
+  <th style="font-size:120%;">اسم الموظفة</th>
+    
+    <th style="font-size:120%;">رقم الطلب</th>
+    <th style="font-size:120%;">تاريخ الطلب </th>
+  
+    <th style="font-size:120%;">تفاصيل </th>
+    <th style="font-size:120%;">مضاف  </th>
+  </tr>
+  <tr style="    border: 1px solid #dddddd;">
+     <td>1</td>
+   <td>ندى خالد </td>
+   <td>349876</td>
+    <td>2019/1/15</td>
+    
+       <td><button class="btn"><a class="button_details" href="#popup1"></a><i class="fa fa-ellipsis-h"></i></button> </td>
+        <td>
+  <input type="checkbox"  class="checkmark" name="chkPassPort" checked="checked"  />
+</td>
+
+  </tr>
+  <tr style="    border: 1px solid #dddddd;">
+     <td>2</td>
+   <td>ليلى ناصر </td>
+   <td>679896</td>
+    <td>2019/3/22</td>
+    
+              <td><button class="btn"><a class="button_details" href="#popup1"></a><i class="fa fa-ellipsis-h"></i></button> </td>
+
+       <td>
+  <input type="checkbox"  class="checkmark" name="chkPassPort"  checked="checked"/>
+</td>
+
+  </tr>
+  <tr style="    border: 1px solid #dddddd;">
+     <td>3</td>
+   <td>ساره محمد </td>
+   <td>349876</td>
+    <td>2019/2/25</td>
+          <td><button class="btn"><a class="button_details" href="#popup1"></a><i class="fa fa-ellipsis-h"></i></button> </td>
+    <td>
+  <input type="checkbox"  class="checkmark" name="chkPassPort" checked="checked"  />
+</td>
+
+  </tr>
+  <tr style="    border: 1px solid #dddddd;">
+     <td>4</td>
+   <td>نوره علي </td>
+   <td>195676</td>
+    <td>2019/1/29</td>
+          <td><button class="btn"><a class="button_details" href="#popup1"></a><i class="fa fa-ellipsis-h"></i></button> </td>
+
+         <td>
+  <input type="checkbox"  class="checkmark" name="chkPassPort" checked="checked" />
+</td>
+
+  </tr><tr style="    border: 1px solid #dddddd;">
+     <td>5</td>
+   <td>الجوهره ناصر</td>
+   <td>349876</td>
+    <td>2019/1/15</td>
+          <td><button class="btn"><a class="button_details" href="#popup1"></a><i class="fa fa-ellipsis-h"></i></button> </td>
+
+     <td>
+  <input type="checkbox"  class="checkmark" name="chkPassPort" checked="checked" />
+</td>
+
+  </tr>
+  
+
+</table>
+</td>
+
+   <tr id="tr_popup">
+    <td id="td.popup" style="text-align: left; margin-top: 12%;   "><h2 style="color: blue; ">إضافة طلبات </h2></td>
+    
+  
+  </tr>
+  <!--------------------------------------------------------------------------->
+<tr id="tr_popup" >
+<td colspan="2"> 
+
+
+<table style="width: 115%; margin-top:0%;margin-right: -4%; margin-left: 25%;     border: 1px solid #dddddd;
+ ">
+  <tr style="    border: 1px solid #dddddd;">
+    <th style="font-size:120%;">الرقم التسلسلي</th>
+  <th style="font-size:120%;">اسم الموظفة</th>
+    
+    <th style="font-size:120%;">رقم الطلب</th>
+    <th style="font-size:120%;">تاريخ الطلب </th>
+  
+    <th style="font-size:120%;">تفاصيل </th>
+    <th style="font-size:120%;">مضاف  </th>
+  </tr>
+  <tr style="    border: 1px solid #dddddd;">
+     <td>1</td>
+   <td>اسماء نايف  </td>
+   <td>349876</td>
+    <td>2019/1/15</td>
+    
+       <td><button class="btn"><a class="button_details" href="#popup1"></a><i class="fa fa-ellipsis-h"></i></button> </td>
+        <td>
+  <input type="checkbox"  class="checkmark" name="chkPassPort"   />
+</td>
+
+  </tr>
+  <tr style="    border: 1px solid #dddddd;">
+     <td>2</td>
+   <td>مي ناصر </td>
+   <td>679896</td>
+    <td>2019/3/22</td>
+    
+              <td><button class="btn"><a class="button_details" href="#popup1"></a><i class="fa fa-ellipsis-h"></i></button> </td>
+
+       <td>
+  <input type="checkbox"  class="checkmark" name="chkPassPort" />
+</td>
+
+  </tr>
+  <tr style="    border: 1px solid #dddddd;">
+     <td>3</td>
+   <td>شهد خالد  </td>
+   <td>349876</td>
+    <td>2019/2/25</td>
+          <td><button class="btn"><a class="button_details" href="#popup1"></a><i class="fa fa-ellipsis-h"></i></button> </td>
+    <td>
+  <input type="checkbox"  class="checkmark" name="chkPassPort"   />
+</td>
+
+  </tr>
+  <tr style="    border: 1px solid #dddddd;">
+     <td>4</td>
+   <td>ساره سامي  </td>
+   <td>195676</td>
+    <td>2019/1/29</td>
+          <td><button class="btn"><a class="button_details" href="#popup1"></a><i class="fa fa-ellipsis-h"></i></button> </td>
+
+         <td>
+  <input type="checkbox"  class="checkmark" name="chkPassPort"  />
+</td>
+
+  </tr><tr style="    border: 1px solid #dddddd;">
+     <td>5</td>
+   <td>هند علي </td>
+   <td>349876</td>
+    <td>2019/1/15</td>
+          <td><button class="btn"><a class="button_details" href="#popup1"></a><i class="fa fa-ellipsis-h"></i></button> </td>
+
+     <td>
+  <input type="checkbox"  class="checkmark" name="chkPassPort"  />
+</td>
+
+  </tr>
+</table></td>
+
+
+</tr>
+<!------------------------------------------------------------------------------->
+
+
+</tbody>
+
+
+</table>
+       
+     
+
+
+
+
+<div style="    margin-right: -30px;
+    margin-top: 0%;">
+    <button class="w3-button" w3-green style="
+    background-color: green;
+     "><b>تحديث </b></button>
+</div>
+
+
+  </div>
+</div>
+</div>
+        
+   </td>
+
+
+<!-- -----pup up 5  ***************************************************************************************---- --> 
+
+
+<div id="popup5" class="overlay">
+  <div class="popup_details"  style="height: 85%;
+    width: 55%";>
+
+    
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+    
+      
+      <table id="table_popup" style="margin-right: 2%;
+    width: 85%;
+    height: 60%%;
+    margin-top: 8%;">
+
+ <tbody>
+    <tr id="tr_popup">
+
+   <td id="td.popup" style="text-align: center;  "> <h4>رقم الجلسة :</h4></td>
+   <td id="td.popup" style="text-align: right; " ><input type="text" id="myInput" onkeyup="myFunction()" placeholder="2" title="Type in a name" style="margin-top: 10%;" ></td> 
+
+  </tr>
+    
+    <tr id="tr_popup">
+
+   <td id="td.popup" style="text-align: center;  "><h4>تاريخ الجلسة :</h4></td>
+    <td id="td.popup" style="text-align: right; " ><input  type="date" id="myInput"/></td>
+  
+  </tr>
+
+   <tr id="tr_popup">
+    <td id="td.popup" style="text-align: left; margin-top: 12%;   "><h2 style="color: blue; ">الطلبات المضافة </h2></td>
+    
+  
+  </tr>
+  <!--------------------------------------------------------------------------->
+<tr id="tr_popup" >
+<td colspan="2"> 
+
+
+<table style="width: 115%; margin-top:0%;margin-right: -4%; margin-left: 25%;     border: 1px solid #dddddd;
+ ">
+  <tr style="    border: 1px solid #dddddd;">
+    <th style="font-size:120%;">الرقم التسلسلي</th>
+  <th style="font-size:120%;">اسم الموظفة</th>
+    
+    <th style="font-size:120%;">رقم الطلب</th>
+    <th style="font-size:120%;">تاريخ الطلب </th>
+  
+    <th style="font-size:120%;">تفاصيل </th>
+    <th style="font-size:120%;">مضاف  </th>
+  </tr>
+  <tr style="    border: 1px solid #dddddd;">
+     <td>1</td>
+   <td>ندى خالد </td>
+   <td>349876</td>
+    <td>2019/1/15</td>
+    
+       <td><button class="btn"><a class="button_details" href="#popup1"></a><i class="fa fa-ellipsis-h"></i></button> </td>
+        <td>
+  <input type="checkbox"  class="checkmark" name="chkPassPort" checked="checked"  />
+</td>
+
+  </tr>
+  <tr style="    border: 1px solid #dddddd;">
+     <td>2</td>
+   <td>ليلى ناصر </td>
+   <td>679896</td>
+    <td>2019/3/22</td>
+    
+              <td><button class="btn"><a class="button_details" href="#popup1"></a><i class="fa fa-ellipsis-h"></i></button> </td>
+
+       <td>
+  <input type="checkbox"  class="checkmark" name="chkPassPort"  checked="checked"/>
+</td>
+
+  </tr>
+  <tr style="    border: 1px solid #dddddd;">
+     <td>3</td>
+   <td>ساره محمد </td>
+   <td>349876</td>
+    <td>2019/2/25</td>
+          <td><button class="btn"><a class="button_details" href="#popup1"></a><i class="fa fa-ellipsis-h"></i></button> </td>
+    <td>
+  <input type="checkbox"  class="checkmark" name="chkPassPort" checked="checked"  />
+</td>
+
+  </tr>
+  <tr style="    border: 1px solid #dddddd;">
+     <td>4</td>
+   <td>نوره علي </td>
+   <td>195676</td>
+    <td>2019/1/29</td>
+          <td><button class="btn"><a class="button_details" href="#popup1"></a><i class="fa fa-ellipsis-h"></i></button> </td>
+
+         <td>
+  <input type="checkbox"  class="checkmark" name="chkPassPort" checked="checked" />
+</td>
+
+  </tr><tr style="    border: 1px solid #dddddd;">
+     <td>5</td>
+   <td>الجوهره ناصر</td>
+   <td>349876</td>
+    <td>2019/1/15</td>
+          <td><button class="btn"><a class="button_details" href="#popup1"></a><i class="fa fa-ellipsis-h"></i></button> </td>
+
+     <td>
+  <input type="checkbox"  class="checkmark" name="chkPassPort" checked="checked" />
+</td>
+
+  </tr>
+  
+
+</table>
+</td>
+
+   <tr id="tr_popup">
+    <td id="td.popup" style="text-align: left; margin-top: 12%;   "><h2 style="color: blue; ">إضافة طلبات </h2></td>
+    
+  
+  </tr>
+  <!--------------------------------------------------------------------------->
+<tr id="tr_popup" >
+<td colspan="2"> 
+
+
+<table style="width: 115%; margin-top:0%;margin-right: -4%; margin-left: 25%;     border: 1px solid #dddddd;
+ ">
+  <tr style="    border: 1px solid #dddddd;">
+    <th style="font-size:120%;">الرقم التسلسلي</th>
+  <th style="font-size:120%;">اسم الموظفة</th>
+    
+    <th style="font-size:120%;">رقم الطلب</th>
+    <th style="font-size:120%;">تاريخ الطلب </th>
+  
+    <th style="font-size:120%;">تفاصيل </th>
+    <th style="font-size:120%;">مضاف  </th>
+  </tr>
+  <tr style="    border: 1px solid #dddddd;">
+     <td>1</td>
+   <td>اسماء نايف  </td>
+   <td>349876</td>
+    <td>2019/1/15</td>
+    
+       <td><button class="btn"><a class="button_details" href="#popup1"></a><i class="fa fa-ellipsis-h"></i></button> </td>
+        <td>
+  <input type="checkbox"  class="checkmark" name="chkPassPort"   />
+</td>
+
+  </tr>
+  <tr style="    border: 1px solid #dddddd;">
+     <td>2</td>
+   <td>مي ناصر </td>
+   <td>679896</td>
+    <td>2019/3/22</td>
+    
+              <td><button class="btn"><a class="button_details" href="#popup1"></a><i class="fa fa-ellipsis-h"></i></button> </td>
+
+       <td>
+  <input type="checkbox"  class="checkmark" name="chkPassPort" />
+</td>
+
+  </tr>
+  <tr style="    border: 1px solid #dddddd;">
+     <td>3</td>
+   <td>شهد خالد  </td>
+   <td>349876</td>
+    <td>2019/2/25</td>
+          <td><button class="btn"><a class="button_details" href="#popup1"></a><i class="fa fa-ellipsis-h"></i></button> </td>
+    <td>
+  <input type="checkbox"  class="checkmark" name="chkPassPort"   />
+</td>
+
+  </tr>
+  <tr style="    border: 1px solid #dddddd;">
+     <td>4</td>
+   <td>ساره سامي  </td>
+   <td>195676</td>
+    <td>2019/1/29</td>
+          <td><button class="btn"><a class="button_details" href="#popup1"></a><i class="fa fa-ellipsis-h"></i></button> </td>
+
+         <td>
+  <input type="checkbox"  class="checkmark" name="chkPassPort"  />
+</td>
+
+  </tr><tr style="    border: 1px solid #dddddd;">
+     <td>5</td>
+   <td>هند علي </td>
+   <td>349876</td>
+    <td>2019/1/15</td>
+          <td><button class="btn"><a class="button_details" href="#popup1"></a><i class="fa fa-ellipsis-h"></i></button> </td>
+
+     <td>
+  <input type="checkbox"  class="checkmark" name="chkPassPort"  />
+</td>
+
+  </tr>
+</table></td>
+
+
+</tr>
+<!------------------------------------------------------------------------------->
+
+
+</tbody>
+
+
+</table>
+       
+     
+
+
+    
+
+
+<div style="    margin-right: -30px;
+    margin-top: 0%;">
+    <button class="w3-button" w3-green style="
+    background-color: green;
+     "><b>تحديث </b></button>
+</div>
+
+
+  </div>
+</div>
+</div>
+        
+   </td>
+
+
+
+
+
+<!------------------------------------------------------------------------------------------------->
 <script>
 function myFunction() {
   var input, filter, table, tr, td, i, txtValue;
@@ -1121,18 +1808,9 @@ function myFunction() {
 
 
 
+</td></tr></tr></tbody></table></div></div>
 
 
 
-
-<div class="footerh">
-  <hr>
-  <img src="logo.png" alt="KSU logo" width="25" height="35" align="middle">
- <p id="fotp" style="text-align: center"> تصميم وتطوير © جامعة الملك سعود 2019  </p>
-  <a href="https://twitter.com/_KSU/?subsite-footer"><img src="tw.png" alt="twitter logo" width="25" height="25">
-  <a href="https://www.instagram.com/king_saud_university/"><img src="in.png" alt="instagram logo" width="25" height="25">
-  <a href="https://www.youtube.com/user/pdksuchannel"><img src="yo.png" alt="youtube logo" width="25" height="25">
-  <a href="https://www.facebook.com/King.Saud.University?subsite-footer"><img src="fa.png" alt="facebook logo" width="25" height="25">
-</div>
 </body>
 </html>
