@@ -1,0 +1,690 @@
+
+<!DOCTYPE html>
+<!-- Sorry no IE7 support! -->
+<!-- @see http://foundation.zurb.com/docs/index.html#basicHTMLMarkup -->
+
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<style>
+body {
+    font-family: sans-serif
+}
+.dialog-ovelay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.50);
+    z-index: 999999
+}
+.dialog-ovelay .dialog {
+    width: 400px;
+    margin: 100px auto 0;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,.2);
+    border-radius: 3px;
+    overflow: hidden
+}
+.dialog-ovelay .dialog header {
+    padding: 10px 8px;
+    background-color: #f6f7f9;
+    border-bottom: 1px solid #e5e5e5
+}
+.dialog-ovelay .dialog header h3 {
+    font-size: 14px;
+    margin: 0;
+    color: #555;
+    display: inline-block
+}
+.dialog-ovelay .dialog header .fa-close {
+    float: right;
+    color: #c4c5c7;
+    cursor: pointer;
+    transition: all .5s ease;
+    padding: 0 2px;
+    border-radius: 1px    
+}
+.dialog-ovelay .dialog header .fa-close:hover {
+    color: #b9b9b9
+}
+.dialog-ovelay .dialog header .fa-close:active {
+    box-shadow: 0 0 5px #673AB7;
+    color: #a2a2a2
+}
+.dialog-ovelay .dialog .dialog-msg {
+    padding: 12px 10px
+}
+.dialog-ovelay .dialog .dialog-msg p{
+    margin: 0;
+    font-size: 15px;
+    color: #333
+}
+.dialog-ovelay .dialog footer {
+    border-top: 1px solid #e5e5e5;
+    padding: 8px 10px
+}
+.dialog-ovelay .dialog footer .controls {
+    direction: rtl
+}
+.dialog-ovelay .dialog footer .controls .button {
+    padding: 5px 15px;
+    border-radius: 3px
+}
+.button {
+  cursor: pointer
+}
+.button-default {
+    background-color: rgb(248, 248, 248);
+    border: 1px solid rgba(204, 204, 204, 0.5);
+    color: #5D5D5D;
+}
+.button-danger {
+    background-color: #f44336;
+    border: 1px solid #d32f2f;
+    color: #f5f5f5
+}
+.link {
+  padding: 5px 10px;
+  cursor: pointer
+}
+
+</style>
+
+
+
+
+  <style>
+    
+
+body{background-color: white;}
+  
+ table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+    margin-top: -15%;
+ margin-right: 25%; 
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: right;
+  padding: 8px;
+}
+
+tr:hover {
+  background-color:#E3E0D2;
+}
+
+
+.btn {
+  background-color:   #0084BD  ;
+  border: none;
+  color: white;
+  padding: 0px 0px;
+  font-size: 80px;
+  cursor: pointer;
+  align-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+.button_details {
+  font-size: 1em;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup_details {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 50%;
+  height: 80%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  text-align: center;
+}
+
+
+.popup_details .close {
+  position: absolute;
+  top: 0px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 38px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup_details .close:hover {
+  color: #06D85F;
+}
+.popup_details .content {
+  max-height: 100%;
+  overflow: auto;
+}
+
+
+.table_popup {
+  font-family: arial, sans-serif;
+  width: 50%;
+  text-align: center;
+  font-size: 20px;
+}
+
+.td.popup {
+  border: 5px solid black;
+  text-align:center;
+  color: black;
+  padding: 8px;
+
+}
+
+.tr_popup:nth-child(even) {
+  background-color: white;
+}
+
+
+
+
+
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup_details{
+    width: 70%;
+  }
+
+
+
+
+
+
+
+.footerh {
+   position: auto;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   padding: 70px;
+   color: #0084BD;
+   text-align: center;
+}
+ #fotp{text-align: center;}
+
+
+
+</style>
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+  <meta charset="utf-8" />
+<meta name="modified" content="2019-05-20" />
+<meta name="Created" content="2014-09-28" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+  <meta charset="utf-8" />
+<meta name="modified" content="2019-05-20" />
+<meta name="Created" content="2014-09-28" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<link type="text/css" rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<link href="ccsc.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="iconcss.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+
+
+  <link rel="stylesheet" href="c1.css" />
+
+<link rel="stylesheet" href="c4.css" />
+<!--
+  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js" charset="UTF-8"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js" charset="UTF-8"></script><style media="screen">.page-header h3{
+ font-size: 20px;
+}
+.main-block-sidebar img{width:164px !important;margin:0px !important;border:0px !important;padding:0px !important;}
+.img-link{  width: 82px;
+  float: right;
+}
+.img-link-left{  width: 82px;
+  float: right;
+}
+.block-even .sidebar .block img{padding:0px !important;}
+.sidebar .block img{width:164px !important;margin:0px !important;border:0px !important;padding:0px !important;}
+.main-block-sidebar{float:right;padding-bottom:20px}
+</style>
+  <script src="//dar.ksu.edu.sa/sites/dar.ksu.edu.sa/files/js/js_iNAOkEESozL_iYM5wM6IpXxKWlfzWF3WfXXR59vwSo8.js"></script>
+<script src="//dar.ksu.edu.sa/sites/dar.ksu.edu.sa/files/js/js_DRxj_N1PA-n42BW4_0Enzztkc42ZWHFBgqODMhl1qRQ.js"></script>
+<script src="//dar.ksu.edu.sa/sites/dar.ksu.edu.sa/files/js/js_fqpgFq1_CXXMhc10sBD9girOo-b3lrYg3n7egIOLm5A.js"></script>
+<script>
+
+jQuery(function() {
+function log( message ) {
+jQuery( "<div>" ).text( message ).prependTo( "#log" );
+jQuery( "#log" ).scrollTop( 0 );
+}
+jQuery( "#suggest" ).autocomplete({
+source: function( request, response ) {
+jQuery.ajax({
+url: "//212.57.195.179/suggest?max_matches=6&use_similar=0&client=default_frontend&site=default_collection",
+dataType: "jsonp",
+data: "token="+request.term,
+success: function( data ) {
+response(data);
+}
+});
+},
+minLength: 2,
+open: function() {
+jQuery( this ).removeClass( "ui-corner-all" ).addClass( "ui-corner-top" );
+},
+close: function() {
+jQuery( this ).removeClass( "ui-corner-top" ).addClass( "ui-corner-all" );
+}
+});
+});
+
+
+</script>
+<script src="//dar.ksu.edu.sa/sites/dar.ksu.edu.sa/files/js/js_V2KQFnTX2KQLb59mf_WGukB9bJJ7jv3ROyji0A-PsGM.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"ar\/","ajaxPageState":{"theme":"zurbclean","theme_token":"X8NTSB-eppgqojGk0F_6E2zu8bTtAudSzkxS53AyM0I","js":{"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.7\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/custom\/custom_tree\/js\/tree.js":1,"sites\/all\/modules\/custom\/ksu_search\/js\/jquery-ui.js":1,"sites\/all\/modules\/contrib\/zurb_responsive_tables\/js\/responsive-tables.js":1,"public:\/\/languages\/ar_N-ry8G3pP-H3OQiJ2shRltkbG1H5ChGECq-AKhyjpHE.js":1,"0":1,"sites\/dar.ksu.edu.sa\/themes\/zurbclean\/js\/vendor\/custom.modernizr.js":1,"sites\/dar.ksu.edu.sa\/themes\/zurbclean\/js\/foundation.min.js":1,"sites\/all\/themes\/zurbksu2\/js\/scripts.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.base-rtl.css":1,"modules\/system\/system.menus-rtl.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.messages-rtl.css":1,"modules\/system\/system.theme.css":1,"modules\/system\/system.theme-rtl.css":1,"sites\/all\/modules\/contrib\/ldap\/ldap_user\/ldap_user.css":1,"sites\/all\/modules\/custom\/custom_tree\/css\/jquery-ui.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date-rtl.css":1,"modules\/field\/theme\/field.css":1,"modules\/field\/theme\/field-rtl.css":1,"sites\/all\/modules\/custom\/ksu_search\/css\/jquery-ui.css":1,"modules\/node\/node.css":1,"modules\/user\/user.css":1,"modules\/user\/user-rtl.css":1,"sites\/all\/modules\/contrib\/youtube\/css\/youtube.css":1,"sites\/all\/modules\/contrib\/zurb_responsive_tables\/css\/responsive-tables.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/views\/css\/views-rtl.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor-rtl.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/ldap\/ldap_servers\/ldap_servers.admin.css":1,"modules\/locale\/locale.css":1,"modules\/locale\/locale-rtl.css":1,"sites\/all\/themes\/zurb-foundation\/css\/normalize.css":1,"sites\/dar.ksu.edu.sa\/themes\/zurbclean\/css\/foundation.min.css":1,"sites\/dar.ksu.edu.sa\/themes\/zurbclean\/css\/app.css":1,"sites\/dar.ksu.edu.sa\/themes\/zurbclean\/css\/app-rtl.css":1,"sites\/all\/themes\/zurbksu2\/css\/font-awesome.min.css":1,"sites\/all\/themes\/zurbksu2\/css\/style.css":1,"sites\/all\/themes\/zurbksu2\/css\/style-rtl.css":1,"sites\/all\/themes\/zurbksu2\/css\/printable.css":1,"0":1}}});</script>
+
+
+
+ -->
+
+  <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]--><!--
+<script type="text/javascript">
+var _prum = [['id', '538471aeabe53d4e15aef7e2'],
+             ['mark', 'firstbyte', (new Date()).getTime()]];
+(function() {
+    var s = document.getElementsByTagName('script')[0]
+      , p = document.createElement('script');
+    p.async = 'async';
+    p.src = '//rum-static.pingdom.net/prum.min.js';
+    s.parentNode.insertBefore(p, s);
+})();
+</script>
+-->
+
+<script type="text/javascript">
+  $(function() {
+$("unique").click(function() {
+
+  $("divpopup").dialog({
+    title:"my Jquery popup",
+    width:450,
+    height:500,
+    modal:true,
+    buttons: {
+Close:
+  function(){
+$(this).dialog('close');
+}
+
+
+
+    }
+
+  });//here im going to write logic to popup operation
+});
+
+  })
+</script>
+
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-first page-node page-node- page-node-259 node-type-page i18n-ar lang-ar section-e-admission" style="background-color: white;" >
+  <div class="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">تجاوز إلى المحتوى الرئيسي</a>
+  </div>
+  <div id="divpopup" style="display:none"> This is popup using Jquery. . !</div>
+    
+
+<div class="row container-boxed"><div class="large-12 columns">
+    <!-- top menu above the logo -->
+    <div class="row" style="color: #7b7f82;font-size: 12px;border-bottom:solid 1px #F0F0F0;">
+        <div class="medium-10 medium-push-2 mini-contacts" style="line-height: 33px;">
+          <div class="row">
+            
+
+            <div class="large-6 medium-6 columns side-header">
+                            <a href="/ar/contact" class="top-contact-us button tiny" style="">اتصل بنا</a>                  <div class="block block-locale block-locale-language">
+
+        <h2 class="block-title">اللغات</h2>
+    
+      <ul class="language-switcher-locale-url"><li class="ar first active"><a href="/ar/e_admission" class="language-link active" xml:lang="ar" title="القبول الإلكتروني الموحد">العربية</a></li>
+<li class="en last"><a href="/en/e-admission" class="language-link" xml:lang="en" title="The Unified Electronic Admission">English</a></li>
+</ul>  
+</div>  <div class="block block-ksu-search block-ksu-search-searchblock">
+
+      
+      
+
+
+
+<div style="margin:9px 0 0 0">
+        <div class="small-7 columns" style="padding-left: 0px; padding-right: 0px">
+    <form  action="//search.ksu.edu.sa/ar/search" target="_blank" method="GET" id="search-block-form">
+    <input type="hidden" value="true" name="advanced">
+    <input type="hidden" value="default_collection" name="sk-collection">
+    <input type="hidden" value="default_frontend" name="client">
+    <input type="hidden" value="xml_no_dtd" name="output">
+    <input type="hidden" value="default_frontend" name="proxystylesheet">
+    <input type="hidden" value="*" name="getfields">
+    <input type="hidden" value="0" name="filter">
+    <input type="hidden" value="10" name="num">
+    <input type="hidden" value="1" name="proxyreload">
+    <input type="hidden" value="200" name="wc">
+    <input type="hidden" value="1" name="wc_mc">
+    <input type="hidden" value="UTF-8" name="oe">
+    <input type="hidden" value="UTF-8" name="ie">
+    <input type="hidden" value="1" name="ud">
+    <input type="hidden" value="1" name="exclude_apps">
+    <input type="hidden" value="https://dar.ksu.edu.sa" name="sk-domain" id="" class="form-control">
+  <!--  <input type="text" style="height: 35px; width: 100%;" aria-haspopup="true" aria-autocomplete="list" role="textbox" autocomplete="off" class="ui-autocomplete-input" name="sk-allwords" id="suggest" size="15">     -->   </div>
+       <!-- <div class="small-5 columns" style="padding-right: 0px; padding-left: 0px">
+              <button style="width: 52px; height: 35px; border: 0px none;" type="submit" value="ابحث" name="op" id="edit-submit" class="postfix small-4 columns form-submit sk-search">ابحث</button>
+
+        </div>-->
+                </div>
+
+</form>
+
+
+  
+</div>            </div>
+          </div>
+        </div>
+    </div>
+     <!-- top menu above the logo ****************************************************************************************************** -->
+
+     <div style="float:left"></div>
+     <header class="row">
+
+      <div class="large-12 columns">
+        <nav class="top-bar" data-topbar="">
+
+          <div class="row fluid-row" style="padding-bottom: 13px;border-bottom: 3px solid #CCC;margin-bottom: 17px;padding-top: 13px;">
+
+            <div class="large-2 medium-3 small-6 columns">
+
+
+              <a href="http://ksu.edu.sa">
+              <img src="https://dar.ksu.edu.sa/sites/all/themes/zurbksu2/img/ksu-logo.png?77" alt="جامعة الملك سعود" class="site-logo" /></a>
+
+
+            </div>
+            <div class="large-10 medium-9 small-12 columns">
+
+                
+              <div class="row">
+                <div class="large-12 columns">
+                  <h1><a href="https://dar.ksu.edu.sa/ar">عمادة التعاملات الالكترونية والاتصالات</a></h1>
+
+
+
+
+
+                                                                          </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <div class="top-bar-section">
+                    <!-- START render( $ page['navigation'] ) -->
+                        <div class="block block-custom-ksu block-custom-ksu-main-navbar">
+
+      
+      <div class="new-navbar navbar-" id="navbar">
+    <div class="navbar-collapse collapse">
+      <div class="header-menu">
+        <nav class="nav-main mega-menu" role="navigation">
+            <div class="top-bar-section"><ul class="right"><li class="first leaf"><a href="/ar">الرئيسية </a></li> <!-- Home page -->
+
+<li class="leaf"><a href="https://news.ksu.edu.sa/ar/node/78282">تسجيل الخروج</a></li>
+
+</div>        </nav>
+      </div>
+    </div>
+  </div>
+
+  
+</div>                    <!-- END render( $ page['navigation'] ) -->
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </nav>
+      </div>
+    </header>
+
+    
+<!--.page -->
+<div role="document" class="page" style="padding-bottom:111%">
+
+  <!--.l-header -->
+  <header role="banner" class="l-header">
+
+    <!-- Title, slogan and menu -->
+        <!-- End title, slogan and menu -->
+
+  </header>
+  <!--/.l-header -->
+
+      <!--.featured -->
+    <section class="l-featured row">
+      <div class="large-12 columns">
+              </div>
+    </section>
+    <!--/.l-featured -->
+  
+  
+     <!-- Right menu ********************************************************************************************* -->
+
+
+
+
+<!-- change --> 
+
+
+
+<div style="background-color:white;height:-webkit-fill-available;
+    margin-right: 480px;
+    margin-top: -145px;
+    width: -webkit-fill-available;">
+
+
+<div>
+<fieldset style="width:136%;align-content: :right;text-align:right;font-size:larger;text-align:-webkit-center;margin-top:1%;margin-right:-50%;">
+
+
+<legend style="align-content:center;">
+<p style="margin-right:39%;font-size:24px"><b>
+إسناد الطلبات</b></p>
+</legend>
+
+<h5>لموظفة في النظام : </h5>
+<select>
+  <option>عهود عبدالعزيز - التعاملات الالكترونية</option>
+  <option>هند القحطاني - التعاملات الالكترونية</option>
+  <option>شيماء الصعب - كلية العلوم</option>
+  <option>ندى الحربي - كلية طب الاسنان</option>
+    <option>سما العنزي - كلية الصيدلة</option>
+
+</select>
+
+<legend style="align-content:center;">
+<p style="margin-right:39%;font-size:24px"><b>
+</b></p>
+</legend>
+<h5>لموظفة خارج النظام :</h5>
+
+
+<h4 style="text-align:center;">
+
+<b>إضافة مستخدم جديد</b></h4>
+
+
+<form action=" " method="get" style="padding: 15px;">
+
+<div class="main">
+ 
+ <div class="titles"style="text-align:right;"> <h5>اسم المستخدم :</h5></div>
+ <div class="inputs" id="username" style="text-align:right;"> <input type="text" ></div>
+ 
+ <div class="titles"style="text-align:right;"> <h5>الجوال : </h5></div>
+ <div class="inputs" id="phone"style="text-align:right;"> <input type="text" >  </div>
+  
+ <div class="titles"style="text-align:right;"><h5> الجهة :</h5></div>
+ <div class="inputs" id="company" style="text-align:right;">  
+           <select>
+            <option>كلية الحاسب</option>
+            <option>التعاملات الالكترونية</option>
+            <option>كلية التربية</option>
+            <option>كلية الادارة والاعمال</option>
+            <option>كلية العلوم</option>
+            </select> 
+       </div>
+ 
+ <div class="titles"style="text-align:right;"><h5>الصلاحية :</h5> </div>
+ <br>
+   <input type="radio" name="valid2" value=""
+  style="
+    margin-left: 7px;
+    margin-right: -94%;
+    margin-top: 0%;">عميدة<br>
+
+
+      <input type="radio" name="valid1" value="" id="validation"
+    style="
+    margin-left: 7px;
+    margin-right: -91%;
+    margin-top: 1%;">وكيلة كلية<br>
+     <input type="radio" name="valid1" value="" id="validation"
+    style="
+    margin-left: 7px;
+    margin-right: -90%;
+    margin-top: 1%;">رئيسة لجنة<br>
+
+
+
+  <input type="radio" name="valid1" value="" id="validation"
+    style="
+    margin-left: 7px;
+    margin-right: -90%;
+    margin-top: 1%;">عضوة لجنة<br>
+  <input type="radio" name="valid2" value=""
+  style="
+    margin-left: 7px;
+    margin-right: -89%;
+    margin-top: 0%;">سكرتيرة لجنة<br>
+
+
+  <input type="radio" name="valid1" value="" id="validation"
+    style="
+    margin-left: 7px;
+    margin-right: -89%;
+    margin-top: 1%;">مديرة النظام<br>
+
+
+
+
+<br>
+ 
+ <div class="titles"style="text-align:right;"> الفعالية : </div>
+ <div class="inputs" id="active" style="text-align:right;margin-right: 1px;margin-top: 10px;"> 
+<input type="checkbox" name="gnd" />  فعال 
+
+ </div>
+</div>
+</form>
+
+  <button class="button button4"> حفظ</button>
+
+<button class="button button4">إلغاء</button>
+
+
+
+
+
+
+
+
+
+
+<div style=" margin-top: 20px;">
+
+</fieldset>
+
+
+</div>
+</div>
+  
+</div></div></div></fieldset></div></div></li>
+
+
+
+
+
+
+
+<div class="footerh" style="margin-top: 20% "align="center">
+  <hr>
+  <img src="logo.png" alt="KSU logo" width="25" height="35" align="middle">
+ <p id="fotp" align="center" style="   color: #0084BD;
+   text-align: center;"> تصميم وتطوير © جامعة الملك سعود 2019  </p>
+  <a href="https://twitter.com/_KSU/?subsite-footer"><img src="tw.png" alt="twitter logo" width="25" height="25">
+  <a href="https://www.instagram.com/king_saud_university/"><img src="in.png" alt="instagram logo" width="25" height="25">
+  <a href="https://www.youtube.com/user/pdksuchannel"><img src="yo.png" alt="youtube logo" width="25" height="25">
+  <a href="https://www.facebook.com/King.Saud.University?subsite-footer"><img src="fa.png" alt="facebook logo" width="25" height="25">
+</div>
+</body>
+</html>
