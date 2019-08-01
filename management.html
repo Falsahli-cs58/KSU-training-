@@ -566,13 +566,37 @@ $(this).dialog('close');
 
 <div>
 
+
 <fieldset style="width:114%;align-content: :right;text-align:right;font-size:larger;text-align:-webkit-center;margin-top:1%;margin-right:-18%;">
 
 
 <legend style="align-content:center;">
-<p style="margin-right:39%;font-size:24px"><b>
+<p style="margin-right:39%;font-size:24px;margin-bottom:-8%"><b>
 إدارة المستخدمين</b></p>
 </legend>
+
+
+
+<div id="myTable_wrapper" class="dataTables_wrapper no-footer"><div id="myTable_filter" class="dataTables_filter" style="margin-top:-10%;margin-bottom:0%;float:right"><label style="margin-right:-44%">بحث:</label><input type="search" class="" placeholder="" aria-controls="myTable" style="margin-right:21%;margin-top:-15%"></div>
+
+<div style="margin-top:20%;">
+<label style="float:right;margin-left:-6%;position:absolute;margin-top:-6%;margin-right:18%">من : </label>
+
+ <div style="float:right;margin-left:4%;margin-right:8%;margin-top:-7%"><input type="date" name="bday" style="width:137px;margin-right:142%;margin-top:-21%"></div>
+
+ <label style="float:right;margin-left:0%;margin-right:48%;margin-top:-9%"> إلى :</label>
+<div style="float:left; margin-left: 34%;margin-top:-7%"><input type="date" name="bday" style="width:137px;margin-right:7%;margin-top:-22%"></div>
+
+
+</div>
+   <form><button type="submit" style="float:left;margin-left:38%;margin-top:-7.5%;margin-right:13%;height:45px;position:absolute"><i class="fa fa-search"></i></button></form>
+
+
+
+
+
+
+
 
 
 
@@ -821,7 +845,7 @@ table = document.getElementById("sampleTable");
 
 
 <div id="popup1" class="overlay">
-  <div class="popup_details"  style="height: 60%;
+  <div class="popup_details"  style="height: 70%;
     width: 55%";>
 
     
@@ -854,8 +878,21 @@ table = document.getElementById("sampleTable");
    <tr id="tr_popup">
 
    <td id="td.popup">الجهة</td>
-   <td id="td.popup"><input type="text" placeholder="كلية لاتربية"></td> 
+   <td id="td.popup"><input type="text" placeholder="كلية التربية"></td> 
 
+   <tr id="tr_popup">
+    <td>الصلاحية</td>
+<td>
+<select>
+      <option>مديرة نظام</option>
+
+  <option>عميدة</option>
+  <option>وكيلة كلية</option>
+  <option>رئيسة لجنة</option>
+    <option>عضوة لجنة</option>
+      <option>سكرتيرة لجنة</option>
+</select></td>
+</tr>
   </tr>
    <tr id="tr_popup">
 
