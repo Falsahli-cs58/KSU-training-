@@ -8,13 +8,57 @@
 <head><style>
     
 
+.checkmark {
+
+
+  text-align: center;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 body{background-color: white;}
   
  table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 70%;
-    margin-top: -15%;
+    margin-top: 4%;
  margin-right: 25%; 
 }
 
@@ -360,7 +404,7 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
       <div class="header-menu">
         <nav class="nav-main mega-menu" role="navigation">
             <div class="top-bar-section"><ul class="right"><li class="first leaf"><a href="hompage2.html">الرئيسية </a></li> <!-- Home page -->
-<li class="expanded has-dropdown not-click"><a href="/ar/about">عن العمادة</a></li>
+
 
 <li class="leaf"><a href="lo_Login.html">تسجيل الخروج</a></li>
 
@@ -403,29 +447,42 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
     </section>
     <!--/.l-featured -->
   
-  
+  <script type="text/javascript">
+    function ShowHideDiv() {
+        var chkYes = document.getElementById("chkYes");
+        var dvPassport = document.getElementById("dvPassport");
+        dvPassport.style.display = chkYes.checked ? "block" : "none";
+    }
+</script>
+
+ <script type="text/javascript">
+    function ShowHideDivs() {
+        var chkYess = document.getElementById("chkYess");
+        var dvPassports = document.getElementById("dvPassports");
+        dvPassports.style.display = chkYess.checked ? "block" : "none";
+    }
+</script>
      <!-- Right menu ********************************************************************************************* -->
 
- <main role="main" class="row l-main">
+  <main >
           <aside role="complementary" class="large-3 l-sidebar-first columns sidebar">
             <div class="block block-custom-ksu block-custom-ksu-sidebar-menu clearfix">
 
       
       <ul class="menu">
-        <li class="first expanded"><a href="requst2.html">إضافة طلب جديد</a>
-<li class="expanded"><a href="talb_2.html">طلباتي</a><li class="first expanded"><a href="New.html">الطلبات الواردة</a>
-            <li class="first expanded"><a href="convermor.html">الطلبات  المعالجة</a>
- <li class="first expanded"><a href="End.html">الطلبات المنتهية</a>
-<li class="expanded"><a href="tfo_2.html">التفويض</a>
-
-<li class="last expanded"><a href="/ar/graduates">التقارير</a>
-
+<li class="first expanded"> <a href="requst2.html">إضافة طلب جديد</a>
+<li class="expanded">       <a href="talb_2.html">طلباتي</a>
+<li class="first expanded"> <a href="New.html">الطلبات الواردة  </a>
+<li class="first expanded"> <a href="convermor.html">الطلبات  المعالجة  </a>
+<li class="first expanded"> <a href="End.html">الطلبات المنتهية  </a>
+<li class="expanded">       <a href="tfo_2.html">التفويض   </a>
+<li class="expanded">       <a href="SL.html">إضافة صلاحيات  </a> 
+<li class="last expanded">  <a href="data.html">التقارير  </a>
 </ul>
 <div class="styleSpacing"></div>
   
-</div>      </aside>
-    
-
+</div>     
+ </aside>
       </main>
   <!--/.l-main-->
 
@@ -436,11 +493,9 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
 
 
 <!-- change --> 
-<h2 style="margin-top: -30%;
+<h2 style="margin-top: -2%;
  margin-right: 50%; color: #0084BD;"  >الطلبات الواردة</h2> <br>
- <br><br><br><br><br>
- <br><br><br><br><br>
-  <br><br>
+ 
 <table align="center">
  <tr>
  <th rowspan="2">الرقم التسلسلي</th>
@@ -488,7 +543,7 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
 </table>
 
 
-<!-- ------------ --> 
+
 
 
 <div id="popup1" class="overlay">
@@ -557,7 +612,7 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
   <tr id="tr_popup">
 
     <td id="td.popup">حالة الطلب</td>
-    <td id="td.popup">محول من مديرة الشؤون الادارية</td>
+    <td id="td.popup">معتمد من العميدة في الجهة المنتقل إليها</td>
 
   </tr>
 
@@ -573,33 +628,124 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
     <td id="td.popup">القسم في حالة اكتفاء</td>
   
   </tr>
-  
-<tr id="tr_popup">
 
-<td> <div style="background-color:white;color:black;padding:5px; text-align:right;">
-  <h2 style="font-size:22px;margin-top: -17px;"><b>المبررات</b></h2>
+<tr id="tr_popup" >
+<td> <div style="background-color:white;color:black; text-align:right;">
+  <h2 style="font-size:22px;margin-top: -20px;"><b>سير الإجراءات</b></h2>
   
-  <p>لا مانع مع وجود بديل</p>
+  
 </div> 
 
+</td>
+<td >
+
+
+
+<table style="height: 60%;width: 90%; margin-top: 8%;margin-right: 8%; margin-left: 15%;">
+  <tr>
+    <th style="font-size:120%;">الإجراءات</th>
+  <th style="font-size:120%;">الصلاحية</th>
+    
+    <th style="font-size:120%;">التاريخ</th>
+    <th style="font-size:120%;">المرئيات</th>
+  </tr>
+  <tr>
+     <td>محول من مديرة الشؤون الادارية</td>
+   <td>ابتهال ناصر </td>
+   
+    <td>1440/10/15</td>
+    <td>وجود  بديل</td>
+  </tr>
+  <tr>
+     <td>محول إلى عميدة الكليات الانسانية</td>
+   <td>ناب عنها :حصة محمد  </td>
+   
+    <td>1440/10/17</td>
+    <td>لا يوجد</td>
+  </tr>
+  <tr>
+     <td>محول إلى وكيلة الكلية المتنقل إليها</td>
+   
+   <td>عهود خالد </td>
+    <td>1440/10/20</td>
+    <td>اكتفاء</td>
+  </tr>
+  
+
+</table>
+</td>
+
+
+
+</tr>
+
+  
+<tr id="tr_popup">
+  <td style="text-align: center;border: 1px solid #dddddd;
+  text-align: right;
+  padding: 8px;"> <div style="background-color:white;color:black;padding:5px; text-align:right;">
+  <h2 style="font-size:22px;margin-top: -10px; "><b>القرار</b></h2>
+ 
+ </td>
+ <td style="text-align: center;border: 1px solid #dddddd;
+  text-align: right;
+  padding: 8px;">
+ <form action="/action_page.php">
+
+<div for="chkNo">
+    <input type="radio" id="chkNo" class="checkmark" name="chkPassPort" onclick="ShowHideDiv()" />
+   <b>قبول  </b>
+</div>
+
+<div for="chkYes">
+    <input type="radio" id="chkYes" class="checkmark" name="chkPassPort" onclick="ShowHideDiv()" />
+     <b> إسناد للرئيسة المباشرة </b>
+</div>
+<div id="dvPassport" style="display: none">
+    <b> البريد الالكتروني :</b>
+    <input type="text" id="txtPassportNumber" />
+</div>
+
+<div for="chkYess">
+    <input type="radio" id="chkYess" class="checkmark" name="chkPassPort" onclick="ShowHideDivs()" />
+   <b> إسناد لمديرة الشؤون الإدارية</b>
+</div>
+<div id="dvPassports" style="display: none">
+   <b> إسناد إلى : </b>
+    <select type="text" id="txtPassportNumber"  style="width:230px;height:40px;background-color:white" >
+
+
+    <option value="none">&nbsp;&nbsp;</option>
+    <option value="amal">أمل محمد - مديرة الشؤون  الإدارية كلية علوم الحاسب </option>
+    <option value="norah">حصه  ناصر - مديرة الشؤون الإدارية بكلية الآداب</option>
+    <option value="nada">عهود خالد - مديرة الشؤون الإدارية بكلية التربية</option>
+    <option value="sarah">ساره فهد - مديرة الشؤون الإدارية بكلية العلوم </option>
+</select>
+</div>
+
+<div for="chkNo">
+    <input type="radio" id="chkNo" class="checkmark" name="chkPassPort" onclick="ShowHideDiv()" />
+   <b> رفض </b>
+</div>
+
+</form></td>
+</div> 
+
+</td>
+</tr>
+
+<tr id="tr_popup">
+<td> <div style="background-color:white;color:black;padding:5px; text-align:right;">
+  <h2 style="font-size:22px;margin-top: -17px;"><b>المبررات</b></h2>
+</div> 
 </td>
 
 
 <td>
-
-
-
-  
  <input type="text" name="firstname" value="" style="height: 70px;text-align:right;">
-  
-  
- 
-
-
-
 </td>
-
 </tr>
+
 
 
 </tbody>
@@ -608,29 +754,32 @@ var _prum = [['id', '538471aeabe53d4e15aef7e2'],
       
       <div style="
  
-    margin-right: 275px;">
-<button class="w3-button w3-blue" style="background-color:blue;"><b>طباعة</b></button>   
+    margin-right: 175px;">
+<button class="w3-button w3-blue" style="background-color:#0084BD;"><b>طباعة</b></button>   
    </div>    
-   <div style="
-   
-    margin-top: -9%;
-    margin-right: 35px;">
-<button class="w3-button w3-red" style="background-color:red;"><b>رفض</b></button>   </div>
-<div style="
   
-    margin-top: -9.5%;
-    margin-right: -199px;">
-<button class="w3-button w3-green" style="background-color: green; ; "><b>قبول</b></button>
+<div style=" margin-top: -10.3%;
+    margin-left: 90px;">
+<button class="w3-button w3-green" style="background-color: green; ; "><b>إرسال</b></button>
 </div>
-    
-      
-        
-    </div>  
+     
   </div>
     </div>
+  </div>
   
 
+<script type="text/javascript">
+  function myFunction(x){
+if(x=0)
+  {document.getElementsById("myDIV").style.display="block" }
+return;
 
+
+
+
+
+  }
+</script>
 
 
 
